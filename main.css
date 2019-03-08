@@ -27,16 +27,34 @@ body {
     flex-wrap: wrap;
     align-items: center;
     position: relative;
-    top: 55%;
-    height: 150px;
+    top: 48%;
+    height: 200px;
 }
 
 h1 {
     font-weight: 700;
+    font-size: 36px;
+    line-height: 1.5;
     color: white;
     width: 100%;
     text-align: center;
 }
 
-nav > button 
+nav > button {
+    border-color: white;
+    border-radius: 2px;
+    background-color: Transparent;
+    padding: 10px 40px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    color: white;
+    margin: 20px 2em 0px 2em;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: white;
+    color: #001D21;
+}
 
