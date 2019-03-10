@@ -4,7 +4,7 @@ html {
 }
 body {
     font-family: 'Raleway', sans-serif;
-    background: url(../assets/background_dark_highres.jpg) no-repeat center center fixed;
+    background: url("../assets/background_dark_highres.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -22,19 +22,23 @@ section {
 }
 
 section:nth-child(1) {
-    background: url(../assets/background_highres.jpg) no-repeat center center fixed;
+    background: url("../assets/background_highres.jpg") no-repeat center center fixed;
     background-size: cover;
     background-position: 50% 0; 
     background-attachment: scroll;
 }
 
+.prevBtn,
+.nextBtn {
+    display: none;
+}
+
 .content {
     height: 100vh;
-    overflow: hidden;
 }
 
 .logo {
-    background-image: url(../assets/logo.png);
+    background-image: url("../assets/logo.png");
     background-repeat: no-repeat;
     background-position: center;
     height: 70px;
@@ -48,7 +52,7 @@ section:nth-child(1) {
     width: 100px;
 }
 
-.welcomePage {
+.introContent {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -117,13 +121,29 @@ nav > a:hover {
     cursor: pointer;
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+.aboutMeContent {
+    color: white;
+    margin: 20px;
 }
 
-.aboutMe {
-    color: white;
+.portrait {
+    background-image: url("../assets/portrait.png");
+    background-position: center center; 
+    background-repeat: no-repeat;
+    height: 250px;
+    background-size: 50%;
+}
+
+hr {
+    border-width: 0.5px;
+}
+
+.aboutMeContent > h2 {
+    text-align: center;
+}
+
+.date {
+    font-weight: 700;
 }
 
 @keyframes HeroAnimation {
@@ -139,7 +159,7 @@ nav > a:hover {
   }
 
 @media ( min-width: 750px ) {
-    .welcomePage {
+    .introContent {
         top: 60%;
     }
     nav { 
@@ -150,6 +170,10 @@ nav > a:hover {
 
     h1 {
         font-size: 36px;
+    }
+
+    .content {
+        overflow: hidden;
     }
 }
 
