@@ -131,7 +131,7 @@ nav > a:hover {
     background-position: center center; 
     background-repeat: no-repeat;
     height: 250px;
-    background-size: 50%;
+    background-size: 180px;
 }
 
 hr {
@@ -156,12 +156,13 @@ hr {
       opacity: 1;
       transform: translateY(0);
     }
-  }
+}
 
-@media ( min-width: 750px ) {
+@media ( min-width: 750px ) {  
     .introContent {
         top: 60%;
     }
+
     nav { 
         flex-basis: 800px; 
         position: fixed;
@@ -175,5 +176,44 @@ hr {
     .content {
         overflow: hidden;
     }
+
+    .portrait {
+        background-size: 200px;
+        grid-area: 2row-left;
+    }
+
+    .aboutMeContent > h2, hr {
+        grid-area: top-right;
+        border-bottom: 1px solid white;
+    }
+
+    .secondRow {
+        grid-area: secondRow-right;
+    }
+
+    .thirdRow {
+        grid-area: thirdRow-right;
+    }
+
+    .fourthRow {
+        grid-area: fourthRow-right;
+    }
+
+    .fifthRow {
+        grid-area: fifthRow-right;
+    }
+
+    .aboutMeContent {
+        display: grid;
+        grid-template-columns: 40% 60%;
+        grid-template-rows: auto auto auto auto; 
+        grid-template-areas:
+            "top-left top-right"
+            "secondRow-left secondRow-right"
+            "thirdRow-left thirdRow-right"
+            "fourthRow-left fourthRow-right"
+            "fifthRow-left fifthRow-right";
+    }
 }
+
 
