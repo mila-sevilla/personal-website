@@ -21,6 +21,8 @@ section {
     height: 100vh;
 }
 
+/*////////////////////////// Welcome/ Intro Section ///////////////////////////////////////////////*/
+
 section:nth-child(1) {
     background: url("../assets/background_highres.jpg") no-repeat center center fixed;
     background-size: cover;
@@ -121,25 +123,62 @@ nav > a:hover {
     cursor: pointer;
 }
 
+/*////////////////////////// About Me Section ///////////////////////////////////////////////*/
+
 .aboutMeContent {
     color: white;
     margin: 20px;
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    grid-auto-rows: minmax(80px, auto);
 }
 
 .portrait {
+    height: 100%;
     background-image: url("../assets/portrait.png");
     background-position: center center; 
     background-repeat: no-repeat;
-    height: 250px;
-    background-size: 180px;
+    height: 160px;
+    background-size: 140px;
+    grid-column: 1/ span 2;
+    grid-row: 1/ span 2;
+}
+
+.date1,
+.date2,
+.date3,
+.date4 {
+    grid-column: 1;
+    justify-self: center;
+}
+
+.secondRow,
+.thirdRow,
+.fourthRow,
+.fifthRow {
+    grid-column: 2;
+}
+
+.secondRow {
+    grid-row: 4;
+}
+
+.thirdRow {
+    grid-row: 5;
+}
+
+.fourthRow {
+    grid-row: 6;
 }
 
 hr {
     border-width: 0.5px;
 }
 
+
 .aboutMeContent > h2 {
     text-align: center;
+    grid-column: 1/ span 2;
 }
 
 .date {
@@ -157,6 +196,8 @@ hr {
       transform: translateY(0);
     }
 }
+
+/* //////////////////////////////// Media Queries /////////////////////////////////////////// */
 
 @media ( min-width: 750px ) {  
     .introContent {
@@ -179,41 +220,100 @@ hr {
 
     .portrait {
         background-size: 200px;
-        grid-area: 2row-left;
-    }
-
-    .aboutMeContent > h2, hr {
-        grid-area: top-right;
-        border-bottom: 1px solid white;
-    }
-
-    .secondRow {
-        grid-area: secondRow-right;
-    }
-
-    .thirdRow {
-        grid-area: thirdRow-right;
-    }
-
-    .fourthRow {
-        grid-area: fourthRow-right;
-    }
-
-    .fifthRow {
-        grid-area: fifthRow-right;
+        height: 220px;
+        grid-column: 1;
+        grid-row: 2 / span 4;
     }
 
     .aboutMeContent {
         display: grid;
-        grid-template-columns: 40% 60%;
-        grid-template-rows: auto auto auto auto; 
-        grid-template-areas:
-            "top-left top-right"
-            "secondRow-left secondRow-right"
-            "thirdRow-left thirdRow-right"
-            "fourthRow-left fourthRow-right"
-            "fifthRow-left fifthRow-right";
+        grid-template-columns: 1fr 0.4fr 1fr 0.2fr 0.4fr;
+        grid-auto-rows: minmax(80px, auto);
     }
+
+    .aboutMeContent > h2, hr {
+        grid-column: 2 / span 3;
+        grid-row: 1;
+        border-bottom: 1px solid white;
+        height: 70px;
+        padding-top: 35px;
+    }
+
+    .date {
+        font-weight: 300;
+    }
+
+    .secondRow,
+    .thirdRow,
+    .fourthRow,
+    .fifthRow {
+        grid-column: 3 / span 4;
+    }
+
+    .date1,
+    .date2,
+    .date3,
+    .date4 {
+        grid-column: 2;
+    }
+
+    .secondRow, 
+    .date1 {
+        grid-row: 2;
+    }
+
+    .thirdRow,
+    .date2 {
+        grid-row: 3;
+    }
+
+    .fourthRow,
+    .date3 {
+        grid-row: 4;
+    }
+
+    .fifthRow,
+    .date4 {
+        grid-row: 5;
+    }
+}
+
+@media ( min-width: 970px ) {  
+
+    .secondRow,
+    .thirdRow,
+    .fourthRow,
+    .fifthRow {
+        grid-column: 3;
+    }
+    
+    .aboutMe_Logo {
+        height: 70px;
+        width: 70px;
+        background-size: 85%;
+        background-repeat: no-repeat;
+        grid-column: 4;
+        align-self: center;
+        justify-self: center;
+        background-position: center center;
+    }
+
+    .upf_logo {
+        background-image: url("../assets/upf.jpg");
+    }
+
+    .flatsearch_logo {
+        background-image: url("../assets/sofa.svg");
+    }
+
+    .sap_logo {
+        background-image: url("../assets/SAP-Logo.svg");
+    }
+
+    .mannheim_logo {
+        background-image: url("../assets/mannheim.png");
+    }
+
 }
 
 
