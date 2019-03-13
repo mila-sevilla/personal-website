@@ -5,7 +5,9 @@ html {
 body {
     font-family: 'Raleway', sans-serif;
     /* background: url("../assets/background_dark_highres.jpg") no-repeat center center fixed; */
-    background: linear-gradient(121.48deg, #29323C 22.25%, #404D5B 81.72%), #29323C;   
+    /* background: linear-gradient(121.48deg, #29323C 22.25%, #404D5B 81.72%), #29323C;    */
+    /* background: #121D34; */
+    background: #01191D;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -137,7 +139,7 @@ nav > a:hover {
 
 .portrait {
     height: 100%;
-    background-image: url("../assets/portrait.png");
+    background-image: url("../assets/monochrome_portrait_new.jpg");
     background-position: center center; 
     background-repeat: no-repeat;
     height: 160px;
@@ -254,6 +256,8 @@ hr {
 
 .email {
     color: #D26F28;
+    font-size: 20px;
+    padding: 10px;
 }
 
 
@@ -289,12 +293,13 @@ hr {
     }
 
     .portrait {
-        display: none;
-        /* background-size: 160px;
-        height: 160px;
-        grid-column: 1;
-        grid-row: 1 / span 3;
-        margin-top: 50px; */
+        /* display: none; */
+        background-size: 120%;
+        height: 100vh;
+        width: 80%;
+        grid-column: 7/ span 10;
+        grid-row: 1/ span 7;
+        justify-self: end;
     }
 
     .aboutMeContent {
