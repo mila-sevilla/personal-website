@@ -4,7 +4,8 @@ html {
 }
 body {
     font-family: 'Raleway', sans-serif;
-    background: url("../assets/background_dark_highres.jpg") no-repeat center center fixed;
+    /* background: url("../assets/background_dark_highres.jpg") no-repeat center center fixed; */
+    background: linear-gradient(121.48deg, #29323C 22.25%, #404D5B 81.72%), #29323C;   
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -211,6 +212,61 @@ hr {
     }
 }
 
+/* //////////////////////////////// Contact Section /////////////////////////////////////////// */
+
+.contactContent {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-flow: row wrap;
+    width: 100vw;
+    height: 100vh;
+    color: white;
+    grid-auto-rows: minmax(60px, auto);
+}
+
+.contactContent > h2 {
+    width: 100%;
+    text-align: center;
+}
+
+.contactContent > .socialIcons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    width: 100%;
+    text-align: center;
+    height: 120px;
+}
+
+.email,
+.linkedIn > a,
+.github > a, 
+.instagram > a {
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    width: 100%;
+    text-align: center;
+    padding: 0px 10px 20px 10px;
+}
+
+.email {
+    color: #D26F28;
+}
+
+
+.linkedIn,
+.github,
+.instagram {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+
+}
+
 /* //////////////////////////////// Media Queries /////////////////////////////////////////// */
 
 @media ( min-width: 750px ) {  
@@ -244,9 +300,9 @@ hr {
     .aboutMeContent {
         display: grid;
         grid-template-columns: repeat(10, 1fr);
-        grid-auto-rows: 80px;
+        grid-template-rows: 1fr 1.3fr 0.5fr 0.5fr 0.5fr 0.5fr 1.3fr;
         margin: 0;
-        align-items: center;
+        align-items: start;
         justify-items: start;
         height: 100%;
         grid-row-gap: 1em;
@@ -257,7 +313,7 @@ hr {
     }
 
     .aboutMeContent > h2 {
-        grid-column: 2/ span 2;
+        grid-column: 2/ span 3;
         grid-row: 1;
         border-bottom: none;
         align-self: end;
@@ -266,7 +322,7 @@ hr {
     }
 
     .selfDescription {
-        grid-column: 2/ span 6;
+        grid-column: 2/ span 5;
         grid-row: 2;
         padding: 0;
     }
@@ -331,13 +387,13 @@ hr {
     } */
     
     .aboutMe_Logo {
-        height: 70px;
-        width: 70px;
-        background-size: 85%;
+        height: 50px;
+        width: 50px;
+        background-size: 100%;
         background-repeat: no-repeat;
         grid-column: 6;
-        /* align-self: center; */
-        justify-self: end;
+        justify-self: center;
+        align-self: start;
         background-position: center center;
     }
 
