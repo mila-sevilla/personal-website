@@ -240,35 +240,37 @@ hr {
     width: 100%;
     text-align: center;
     height: 120px;
+    margin: 10px 0 0 0;
 }
 
-.email,
-.linkedIn > a,
-.github > a, 
-.instagram > a {
+.linkedIn,
+.github,
+.instagram {
     text-decoration: none;
     font-size: 18px;
     color: white;
-    width: 100%;
     text-align: center;
-    padding: 0px 10px 20px 10px;
+    padding: 75px 0 20px 0;
+    margin: 0px 30px;
+    background-position: center top;
+}
+
+.linkedIn {
+    background: url("../assets/linkedin.png") center top no-repeat;
+}
+
+.github {
+    background: url("../assets/github.png") center top no-repeat;
+}
+
+.instagram {
+    background: url("../assets/instagram.png") center top no-repeat;
 }
 
 .email {
     color: #D26F28;
     font-size: 20px;
     padding: 10px;
-}
-
-
-.linkedIn,
-.github,
-.instagram {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-
-
 }
 
 /* //////////////////////////////// Media Queries /////////////////////////////////////////// */
