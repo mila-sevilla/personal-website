@@ -37,11 +37,6 @@ section:nth-child(1) {
     background-attachment: scroll;
 }
 
-.next,
-.prev {
-    display: none;
-}
-
 .content {
     height: 100vh;
     touch-action: none;

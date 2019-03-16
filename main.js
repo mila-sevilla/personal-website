@@ -5,20 +5,38 @@ const section1Btn = document.querySelector('.section1Btn');
 const section2Btn = document.querySelector('.section2Btn');
 const section3Btn = document.querySelector('.section3Btn');
 
+// const introContent= document.querySelector('.introContent');
+// const aboutMeContent = document.querySelector('.aboutMeContent');
+// const portfolioContent = document.querySelector('.portfolioContent');
+// const contactContent = document.querySelector('.contactContent');
+
+// const sectionsTexts = [section0Btn.querySelector('.text'), section1Btn.querySelector('.text'), section2Btn.querySelector('.text'), section3Btn.querySelector('.text')];
+const sectionsTexts = [sections[0].querySelector('.text'), sections[1].querySelector('.text'), sections[2].querySelector('.text'), sections[3].querySelector('.text')];
+// const sectionsTexts = [introContent.querySelector('.text'), aboutMeContent.querySelector('.text'), portfolioContent.querySelector('.text'), contactContent.querySelector('.text')];
+
+
 const idlePeriod = 200;
 const animationDuration = 1000;
 
 let lastAnimation = 0;
 let index = 0;
 
+// const toggleText = (index, state) => {
+//     if (state === 'show') {
+//       sections[index].querySelector('.text').classList.add('show');  
+//     } else {
+//       sections[index].querySelector('.text').classList.remove('show');  
+//     } 
+// }
+
 const toggleText = (index, state) => {
     if (state === 'show') {
-      sections[index].querySelector('.text').classList.add('show');  
+        sectionsTexts[index].classList.add('show');  
     } else {
-      sections[index].querySelector('.text').classList.remove('show');  
+        sectionsTexts[index].classList.remove('show');  
     } 
 }
-  
+
 toggleText(0, 'show');
 
 document.addEventListener('wheel', event => {
@@ -59,13 +77,13 @@ document.addEventListener('wheel', event => {
 
 section0Btn.addEventListener('click', () => {
     index = 0;
-    sections[index].scrollIntoView({block: "start", behavior: 'smooth'});
+    sections[index].scrollIntoView({behavior: 'smooth'});
     toggleText(index, 'show');
 })
 
 section1Btn.addEventListener('click', () => {
     index = 1;
-    sections[index].scrollIntoView({block: "start", behavior: 'smooth'});
+    sections[index].scrollIntoView({behavior: 'smooth'});
     toggleText(index, 'show');
 })
 
@@ -80,6 +98,8 @@ section3Btn.addEventListener('click', () => {
     sections[index].scrollIntoView({behavior: 'smooth'});
     toggleText(index, 'show');
 })
+
+
 
 // SOLUTION WITH LOOP
 
