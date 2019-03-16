@@ -52,10 +52,12 @@ section:nth-child(1) {
     z-index: 3;
 }
 
-.logo > a {
+.logo > button {
     display: block;
     height: 70px;
     width: 100px;
+    border: none;
+    background-color: transparent;
 }
 
 .introContent {
@@ -97,11 +99,10 @@ nav {
     z-index: 3;
 }
 
-nav > a {
+nav > button {
     border: 1px solid;
     border-color: white;
     border-radius: 2px;
-    width: 82px;
     background-color: Transparent;
     padding: 10px 40px;
     font-family: 'Raleway', sans-serif;
@@ -117,13 +118,18 @@ nav > a {
     transition: background-color 0.2s ease-out;
 }
 
-nav > a:hover {
+nav > button:hover {
     cursor: pointer;
     background-color: white;
     color: #001D21;
 }
 
-.logo:hover {
+button:focus {
+    outline: none !important;
+    border: 1px solid #D26F28;
+}
+
+.section0Btn:hover {
     cursor: pointer;
 }
 
@@ -421,7 +427,7 @@ hr {
     }
 
     .flatsearch_logo {
-        background-image: url("../assets/sofa.svg");
+        background-image: url("../assets/sofa.png");
     }
 
     .sap_logo {
