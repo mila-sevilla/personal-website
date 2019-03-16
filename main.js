@@ -4,6 +4,7 @@ const section0Btn = document.querySelector('.section0Btn');
 const section1Btn = document.querySelector('.section1Btn');
 const section2Btn = document.querySelector('.section2Btn');
 const section3Btn = document.querySelector('.section3Btn');
+
 const idlePeriod = 200;
 const animationDuration = 1000;
 
@@ -24,7 +25,7 @@ document.addEventListener('wheel', event => {
     var delta = event.wheelDelta;
     var timeNow = new Date().getTime();
     // Cancel scroll if currently animating or within quiet period
-    if(timeNow - lastAnimation < idlePeriod + animationDuration) {
+    if (timeNow - lastAnimation < idlePeriod + animationDuration) {
       event.preventDefault();
       return;
     }
@@ -38,9 +39,8 @@ document.addEventListener('wheel', event => {
             if (i === index) {
             toggleText(i, 'show');
             section.scrollIntoView({behavior: "smooth"});
-        }
+            }
         })
-
     // scrolling up
     } else {
         if (index < 1) return;
@@ -51,10 +51,9 @@ document.addEventListener('wheel', event => {
             if (i === index) {
             toggleText(i, 'show');
             section.scrollIntoView({behavior: "smooth"});
-        }
+            }
         })
-    }
-    
+    }  
     lastAnimation = timeNow;
 })
 
@@ -80,7 +79,7 @@ section3Btn.addEventListener('click', () => {
     index = 3;
     sections[index].scrollIntoView({behavior: 'smooth'});
     toggleText(index, 'show');
-});
+})
 
 // SOLUTION WITH LOOP
 

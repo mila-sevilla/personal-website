@@ -100,11 +100,6 @@ nav {
     flex-basis: 200px;
     bottom: 50px;
     z-index: 3;
-    /* animation: HeroAnimation;
-    animation-duration: 3s;
-    animation-delay: 0.1s;
-    animation-fill-mode: forwards;
-    animation-timing-function: cubic-bezier(0.02, 0.8, 0.2, 1); */
 }
 
 nav > a {
