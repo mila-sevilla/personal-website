@@ -146,7 +146,7 @@ button:focus {
 
 .portrait {
     height: 100%;
-    background-image: url("../assets/monochrome_portrait_new.jpg");
+    background-image: url("../assets/portfolio_picture_new.jpg");
     background-position: center center; 
     background-repeat: no-repeat;
     height: 160px;
@@ -314,12 +314,13 @@ hr {
 
     .portrait {
         /* display: none; */
-        background-size: 120%;
-        height: 100vh;
+        background-size: 100%;
+        height: 100%;
         width: 80%;
-        grid-column: 7/ span 10;
-        grid-row: 1/ span 7;
-        justify-self: end;
+        grid-column: 8/ span 10;
+        grid-row: 2/ span 5;
+        /* justify-self: end; */
+        border-radius: 3px;
     }
 
     .aboutMeContent {
