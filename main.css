@@ -343,7 +343,7 @@ hr {
         justify-self: start;
         float: left;
         width: 85px;
-        margin-right: 40px;
+        margin-right: 5vw;
     }
 
     .aboutMeCV_descr {
@@ -398,7 +398,7 @@ hr {
         background-color: white;
         top: 37%;
         bottom: 34%;
-        left: 10.5%;
+        left: 10%;
         opacity: 0.5;
     }
 
@@ -406,10 +406,10 @@ hr {
         content: '';
         position: absolute;
         /* #D26F28 */
-        border: 6px solid white; 
+        border: 5px solid white; 
         border-radius: 50%;
         opacity: 0.9;
-        left: 2px;
+        left: -3px;
         top: 12%;
     }
 
@@ -419,7 +419,7 @@ hr {
         background-size: 100%;
         background-repeat: no-repeat;
         grid-column: 6;
-        justify-self: center;
+        justify-self: end;
         align-self: start;
         background-position: center center;
     }
