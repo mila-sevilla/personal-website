@@ -31,7 +31,7 @@ section {
 /*////////////////////////// Welcome/ Intro Section ///////////////////////////////////////////////*/
  
 section:nth-child(1) {
-    background: url("assets/background_highres.jpg") no-repeat center center fixed;
+    background: url("/background_highres.2d60b9cb.jpg") no-repeat center center fixed;
     background-size: cover;
     background-position: 50% 0; 
     background-attachment: scroll;
@@ -43,7 +43,7 @@ section:nth-child(1) {
 }
 
 .logo {
-    background-image: url("assets/logo.png");
+    background-image: url("/logo.e9a9c890.png");
     background-repeat: no-repeat;
     background-position: center;
     height: 70px;
@@ -147,7 +147,7 @@ button:focus {
 
 .portrait {
     height: 100%;
-    background-image: url("assets/portfolio_picture_duotone_noBG.png");
+    background-image: url("/portfolio_picture_duotone_noBG.056981e3.png");
     background-position: center center; 
     background-repeat: no-repeat;
     height: 160px;
@@ -253,15 +253,15 @@ hr {
 }
 
 .linkedIn {
-    background: url("assets/linkedin.png") center top no-repeat;
+    background: url("/linkedin.90c4945d.png") center top no-repeat;
 }
 
 .github {
-    background: url("assets/github.png") center top no-repeat;
+    background: url("/github.23c538a5.png") center top no-repeat;
 }
 
 .instagram {
-    background: url("assets/instagram.png") center top no-repeat;
+    background: url("/instagram.77044c70.png") center top no-repeat;
 }
 
 .email {
@@ -425,20 +425,23 @@ hr {
     }
 
     .upf_logo {
-        background-image: url("assets/upf.jpg");
+        background-image: url("/upf.85938468.jpg");
     }
 
     .flatsearch_logo {
-        background-image: url("assets/sofa.png");
+        background-image: url("/sofa.5ee9a200.png");
     }
 
     .sap_logo {
-        background-image: url("assets/SAP-Logo.svg");
+        background-image: url("/SAP-Logo.68c771d5.svg");
     }
 
     .mannheim_logo {
-        background-image: url("assets/mannheim.png");
+        background-image: url("/mannheim.8f94c44b.png");
     }
 }
 
 
+
+
+/*# sourceMappingURL=/main.af46ece4.css.map */
