@@ -5,6 +5,8 @@ html {
 }
 body {
     font-family: 'Raleway', sans-serif;
+    font-family: 'Satisfy', cursive;
+    font-family: 'Roboto Slab', serif;
     /* background: url("../assets/background_dark_highres.jpg") no-repeat center center fixed; */
     /* background: linear-gradient(121.48deg, #29323C 22.25%, #404D5B 81.72%), #29323C;    */
     /* background: #121D34; */
@@ -170,13 +172,6 @@ button:focus {
     grid-column: 1 /span 2;
     padding: 0px 5%;
 }
-
-
-
-hr {
-    border-width: 0.5px;
-}
-
 
 .aboutMeContent > h2 {
     text-align: center;

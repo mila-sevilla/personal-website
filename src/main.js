@@ -1,5 +1,6 @@
-const sections = document.querySelectorAll('section');
+import "./main.scss";
 
+const sections = document.querySelectorAll('section');
 const section0Btn = document.querySelector('.section0Btn');
 const section1Btn = document.querySelector('.section1Btn');
 const section2Btn = document.querySelector('.section2Btn');
