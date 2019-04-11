@@ -80,12 +80,17 @@ nav {
   flex-basis: 200px;
   bottom: 50px;
   z-index: 3; }
+  nav svg {
+    position: relative;
+    top: -8px;
+    left: -2px;
+    z-index: -1; }
   nav > button {
     width: 170px;
+    height: 47px;
     border: none;
-    background: url("/stroke.b64528a8.png") bottom no-repeat;
     background-color: Transparent;
-    padding: 10px 40px 7px 40px;
+    padding: 20px 40px 7px 40px;
     font-family: 'Raleway', sans-serif;
     font-size: 18px;
     color: #EFE4E4;
@@ -96,16 +101,17 @@ nav {
 button:hover {
   cursor: pointer; }
 
+button:focus {
+  outline: none !important;
+  border: 1px solid #D26F28; }
+
 .section0Btn:hover {
   cursor: pointer; }
 
 /*////////////////////////// About Me Section ///////////////////////////////////////////////*/
 .aboutMeContent {
   color: white;
-  margin: 20px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-auto-rows: minmax(60px, auto); }
+  margin: 20px; }
 
 .portrait {
   height: 100%;
