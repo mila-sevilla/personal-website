@@ -16,13 +16,14 @@ body {
   background-attachment: scroll;
   line-height: 1.5; }
 
-section {
-  width: 100vw;
-  height: 100vh; }
-
 h1, h2, h3 {
   font-family: 'Satisfy', cursive;
   color: #EFE4E4; }
+
+h2 {
+  font-size: 80px;
+  padding: 0;
+  text-align: center; }
 
 p {
   color: #EFE4E4;
@@ -77,9 +78,7 @@ nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  flex-basis: 200px;
-  bottom: 50px;
-  z-index: 3; }
+  flex-basis: 200px; }
   nav svg {
     position: relative;
     top: -8px;
@@ -96,7 +95,7 @@ nav {
     color: #EFE4E4;
     text-decoration: none;
     text-align: center;
-    margin: 20px 1.5em 0px 1.5em; }
+    margin: 10px 1.5em; }
 
 button:hover {
   cursor: pointer; }
@@ -110,38 +109,10 @@ button:focus {
 
 /*////////////////////////// About Me Section ///////////////////////////////////////////////*/
 .aboutMeContent {
-  color: white;
   margin: 20px; }
-
-.portrait {
-  height: 100%;
-  background-image: url("/portfolio_picture_duotone_noBG.056981e3.png");
-  background-position: center center;
-  background-repeat: no-repeat;
-  height: 160px;
-  background-size: 140px;
-  grid-column: 1/ span 2;
-  grid-row: 3/ span 2; }
-
-.selfDescription {
-  grid-column: 1 /span 2;
-  grid-row: 5;
-  padding: 0px 5%;
-  text-align: justify; }
-
-.secondRow,
-.thirdRow,
-.fourthRow,
-.fifthRow {
-  grid-column: 1 /span 2;
-  padding: 0px 5%; }
-
-.aboutMeContent > h2 {
-  text-align: center;
-  grid-column: 1/ span 2;
-  grid-row: 2;
-  border-bottom: 1px solid white;
-  padding-bottom: 20px; }
+  .aboutMeContent h2 {
+    background: url("/barcelona.144547a9.svg") left center no-repeat;
+    background-size: 94px; }
 
 .date {
   font-weight: 700; }
