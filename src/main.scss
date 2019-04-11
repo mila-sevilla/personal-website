@@ -1,87 +1,51 @@
-html {
+// color variables
+$color-text-light: #EFE4E4;
+$color-primary: #D27029;
+$color-secondary-dark: #134047;
+$color-secondary-light: #134047;
+$color-background: #16223B;
+// font size
+$font-size-regular: 16px;
+
+
+html,
+body {
     height: 100%;
     width: 100%;
-    touch-action: none;
+    margin: 0; 
+    padding: 0;
 }
 body {
     font-family: 'Raleway', sans-serif;
-    font-family: 'Satisfy', cursive;
-    font-family: 'Roboto Slab', serif;
-    /* background: url("../assets/background_dark_highres.jpg") no-repeat center center fixed; */
-    /* background: linear-gradient(121.48deg, #29323C 22.25%, #404D5B 81.72%), #29323C;    */
-    /* background: #121D34; */
-    background: #01191D;
+    background: $color-background;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     background-position: 50% 0; 
-    width: 100%;
-    height: 100%;
-    margin: 0; 
-    padding: 0;
+    background-attachment: scroll;
     line-height: 1.5;
-    touch-action: none;
 }
 
 section {
     width: 100vw;
     height: 100vh;
-    touch-action: none;
+}
+
+h1, h2, h3 {
+    font-family: 'Satisfy', cursive;
+    color: $color-text-light;
+}
+
+p {
+    color: $color-text-light;
+    font-size: $font-size-regular;
 }
 
 /*////////////////////////// Welcome/ Intro Section ///////////////////////////////////////////////*/
  
-section:nth-child(1) {
-    background: url("assets/background_highres.jpg") no-repeat center center fixed;
-    background-size: cover;
-    background-position: 50% 0; 
-    background-attachment: scroll;
-}
-
 .content {
     height: 100vh;
-    touch-action: none;
-}
-
-.logo {
-    background-image: url("assets/logo.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 70px;
-    width: 100px;
-    position: fixed;
-    z-index: 3;
-}
-
-.logo > button {
-    display: block;
-    height: 70px;
-    width: 100px;
-    border: none;
-    background-color: transparent;
-}
-
-.introContent {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    align-items: center;
-    position: relative;
-    top: 40%;
-    height: 400px;
-    touch-action: none;
-}
-
-h1 {
-    font-weight: 700;
-    font-size: 25px;
-    line-height: 1.5;
-    color: white;
-    width: 100%;
-    text-align: center;
-    margin: 15px 20px;
-    opacity: 0;
 }
 
 .text.show {
@@ -92,6 +56,50 @@ h1 {
     animation-timing-function: cubic-bezier(0.02, 0.8, 0.2, 1);
 }
 
+.logo {
+    background: url("assets/logo.svg") center no-repeat;
+    background-size: 51px;
+    height: 70px;
+    width: 100px;
+    position: fixed;
+    z-index: 99;
+
+    > button {
+        display: block;
+        height: 70px;
+        width: 100px;
+        border: none;
+        background-color: transparent;
+    }
+}
+
+.introContent {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    h1 {
+        font-size: 105px;
+        width: 100%;
+        height: 125px;
+        text-align: center;
+        margin: 50px 20px 0px 20px;
+        opacity: 0;
+    }
+
+    &_portrait {
+        background: url("assets/portfolio_pic_v2.png") center top no-repeat;
+        background-size: 156px;
+        width: 100%;
+        height: 156px;
+        margin: 20px 0px;
+    }
+
+    &_text {
+        margin: 0px 38px;
+    }
+}
+
 nav {
     display: flex;
     flex-wrap: wrap;
@@ -99,37 +107,31 @@ nav {
     flex-basis: 200px;
     bottom: 50px;
     z-index: 3;
+
+    > button {
+        width: 170px;
+        border: none;
+        background: url("assets/stroke.png") bottom no-repeat;
+        background-color: Transparent;
+        padding: 10px 40px 7px 40px;
+        font-family: 'Raleway', sans-serif;
+        font-size: 18px;
+        color: $color-text-light;
+        text-decoration: none;
+        text-align: center;
+        margin: 20px 1.5em 0px 1.5em;
+    }
 }
 
-nav > button {
-    border: 1px solid;
-    width: 170px;
-    border-color: white;
-    border-radius: 2px;
-    background-color: Transparent;
-    padding: 10px 40px;
-    font-family: 'Raleway', sans-serif;
-    font-size: 18px;
-    font-weight: 300;
-    color: white;
-    text-decoration: none;
-    text-align: center;
-    margin: 20px 1.5em 0px 1.5em;
-    -webkit-transition: background-color 0.2s ease-out;
-    -moz-transition: background-color 0.2s ease-out;
-    -o-transition: background-color 0.2s ease-out;
-    transition: background-color 0.2s ease-out;
-}
-
-nav > button:hover {
+button {
+    &:hover {
     cursor: pointer;
-    background-color: white;
-    color: #001D21;
-}
+    }
 
-button:focus {
-    outline: none !important;
-    border: 1px solid #D26F28;
+    // &:focus {
+    //     outline: none !important;
+    //     border: 1px solid #D26F28;
+    // }
 }
 
 .section0Btn:hover {
@@ -144,7 +146,6 @@ button:focus {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-auto-rows: minmax(60px, auto);
-    touch-action: none;
 }
 
 .portrait {
@@ -208,7 +209,6 @@ button:focus {
     height: 100vh;
     color: white;
     grid-auto-rows: minmax(60px, auto);
-    touch-action: none;
 }
 
 .contactContent > h2 {
@@ -285,7 +285,6 @@ button:focus {
 
     .content {
         overflow: hidden;
-        touch-action: none;
     }
 
     .portrait {
