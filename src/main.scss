@@ -7,7 +7,7 @@ $color-background: #16223B;
 // font size
 $font-size-regular: 16px;
 
-
+//Global Declarations
 html,
 body {
     height: 100%;
@@ -47,6 +47,17 @@ h2 {
 p {
     color: $color-text-light;
     font-size: $font-size-regular;
+}
+
+button {
+    &:hover {
+    cursor: pointer;
+    }
+
+    &:focus {
+        outline: none !important;
+        border: 1px solid #D26F28;
+    }
 }
 
 /*////////////////////////// Welcome/ Intro Section ///////////////////////////////////////////////*/
@@ -137,17 +148,6 @@ nav {
     }
 }
 
-button {
-    &:hover {
-    cursor: pointer;
-    }
-
-    &:focus {
-        outline: none !important;
-        border: 1px solid #D26F28;
-    }
-}
-
 .section0Btn:hover {
     cursor: pointer;
 }
@@ -155,7 +155,7 @@ button {
 /*////////////////////////// About Me Section ///////////////////////////////////////////////*/
 
 .aboutMeContent {
-    margin: 20px;
+    margin: 20px 20px 0px 20px;
 
     h2 {
         background: url("assets/barcelona.svg") left center no-repeat;
@@ -176,28 +176,32 @@ button {
 }
 
 .timeline {
-    height: 70%;
+    position: relative;
+
+    .aboutMeCV_descr:last-child {
+        margin-bottom: 0px;
+    }
 }
 
-.timeline::before {
+.line {
     content: '';
     position: absolute;
     width: 3px;
-    height: 80%;
     background-color: white;
-    left: 5px;
+    left: -10px;
     opacity: 0.5;
+    height: 97%;
+    top: 6px;
 }
 
-.date::before {
+.date::after {
     content: '';
     position: absolute;
-    /* #D26F28 */
     border: 5px solid white; 
     border-radius: 50%;
     opacity: 0.9;
-    left: 0px;
-    // top: 12%;
+    left: -13px;
+    margin-top: 5px;
 }
 
 
