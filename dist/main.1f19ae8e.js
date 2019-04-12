@@ -117,77 +117,138 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"main.js":[function(require,module,exports) {
+})({"../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+var bundleURL = null;
+
+function getBundleURLCached() {
+  if (!bundleURL) {
+    bundleURL = getBundleURL();
+  }
+
+  return bundleURL;
+}
+
+function getBundleURL() {
+  // Attempt to find the URL of the current script and use that as the base URL
+  try {
+    throw new Error();
+  } catch (err) {
+    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
+
+    if (matches) {
+      return getBaseURL(matches[0]);
+    }
+  }
+
+  return '/';
+}
+
+function getBaseURL(url) {
+  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
+}
+
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+},{}],"../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
+var bundle = require('./bundle-url');
+
+function updateLink(link) {
+  var newLink = link.cloneNode();
+
+  newLink.onload = function () {
+    link.remove();
+  };
+
+  newLink.href = link.href.split('?')[0] + '?' + Date.now();
+  link.parentNode.insertBefore(newLink, link.nextSibling);
+}
+
+var cssTimeout = null;
+
+function reloadCSS() {
+  if (cssTimeout) {
+    return;
+  }
+
+  cssTimeout = setTimeout(function () {
+    var links = document.querySelectorAll('link[rel="stylesheet"]');
+
+    for (var i = 0; i < links.length; i++) {
+      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
+        updateLink(links[i]);
+      }
+    }
+
+    cssTimeout = null;
+  }, 50);
+}
+
+module.exports = reloadCSS;
+},{"./bundle-url":"../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"main.scss":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"./assets/logo2.svg":[["logo2.9dc35042.svg","assets/logo2.svg"],"assets/logo2.svg"],"./assets/portfolio_pic_v2.png":[["portfolio_pic_v2.c0dcd53b.png","assets/portfolio_pic_v2.png"],"assets/portfolio_pic_v2.png"],"./assets/barcelona.svg":[["barcelona.144547a9.svg","assets/barcelona.svg"],"assets/barcelona.svg"],"./assets/linkedin.png":[["linkedin.90c4945d.png","assets/linkedin.png"],"assets/linkedin.png"],"./assets/github.png":[["github.23c538a5.png","assets/github.png"],"assets/github.png"],"./assets/instagram.png":[["instagram.77044c70.png","assets/instagram.png"],"assets/instagram.png"],"_css_loader":"../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"main.js":[function(require,module,exports) {
+"use strict";
+
+require("./main.scss");
+
 var sections = document.querySelectorAll('section');
 var section0Btn = document.querySelector('.section0Btn');
 var section1Btn = document.querySelector('.section1Btn');
 var section2Btn = document.querySelector('.section2Btn');
-var section3Btn = document.querySelector('.section3Btn'); // const introContent= document.querySelector('.introContent');
-// const aboutMeContent = document.querySelector('.aboutMeContent');
-// const portfolioContent = document.querySelector('.portfolioContent');
-// const contactContent = document.querySelector('.contactContent');
-// const sectionsTexts = [section0Btn.querySelector('.text'), section1Btn.querySelector('.text'), section2Btn.querySelector('.text'), section3Btn.querySelector('.text')];
-
-var sectionsTexts = [sections[0].querySelector('.text'), sections[1].querySelector('.text'), sections[2].querySelector('.text'), sections[3].querySelector('.text')]; // const sectionsTexts = [introContent.querySelector('.text'), aboutMeContent.querySelector('.text'), portfolioContent.querySelector('.text'), contactContent.querySelector('.text')];
-
+var section3Btn = document.querySelector('.section3Btn');
 var idlePeriod = 200;
 var animationDuration = 1000;
 var lastAnimation = 0;
-var index = 0; // const toggleText = (index, state) => {
-//     if (state === 'show') {
-//       sections[index].querySelector('.text').classList.add('show');  
-//     } else {
-//       sections[index].querySelector('.text').classList.remove('show');  
-//     } 
-// }
+var index = 0;
+var entry_animation = sections[0].querySelectorAll('.entry_animation');
 
-var toggleText = function toggleText(index, state) {
+var toggleText = function toggleText(i, state) {
   if (state === 'show') {
-    sectionsTexts[index].classList.add('show');
+    for (var i = 0; i < entry_animation.length; i++) {
+      entry_animation[i].classList.add('show');
+    }
   } else {
-    sectionsTexts[index].classList.remove('show');
+    entry_animation[i].classList.remove('show');
   }
 };
 
-toggleText(0, 'show');
-document.addEventListener('wheel', function (event) {
-  var delta = event.wheelDelta;
-  var timeNow = new Date().getTime(); // Cancel scroll if currently animating or within quiet period
+toggleText(0, 'show'); // document.addEventListener('wheel', event => {
+//     var delta = event.wheelDelta;
+//     var timeNow = new Date().getTime();
+//     // Cancel scroll if currently animating or within quiet period
+//     if (timeNow - lastAnimation < idlePeriod + animationDuration) {
+//       event.preventDefault();
+//       return;
+//     }
+//     // scrolling down
+//     if (delta < 0) {
+//         if (index > 2) return;
+//         toggleText(index, 'hide');
+//         index++;
+//         sections.forEach((section, i) => {       
+//             if (i === index) {
+//             toggleText(i, 'show');
+//             section.scrollIntoView({behavior: "smooth"});
+//             }
+//         })
+//     // scrolling up
+//     } else {
+//         if (index < 1) return;
+//         toggleText(index, 'hide');
+//         index--;
+//         sections.forEach((section, i) => {
+//             if (i === index) {
+//             toggleText(i, 'show');
+//             section.scrollIntoView({behavior: "smooth"});
+//             }
+//         })
+//     }  
+//     lastAnimation = timeNow;
+// })
 
-  if (timeNow - lastAnimation < idlePeriod + animationDuration) {
-    event.preventDefault();
-    return;
-  } // scrolling down
-
-
-  if (delta < 0) {
-    if (index > 2) return;
-    toggleText(index, 'hide');
-    index++;
-    sections.forEach(function (section, i) {
-      if (i === index) {
-        toggleText(i, 'show');
-        section.scrollIntoView({
-          behavior: "smooth"
-        });
-      }
-    }); // scrolling up
-  } else {
-    if (index < 1) return;
-    toggleText(index, 'hide');
-    index--;
-    sections.forEach(function (section, i) {
-      if (i === index) {
-        toggleText(i, 'show');
-        section.scrollIntoView({
-          behavior: "smooth"
-        });
-      }
-    });
-  }
-
-  lastAnimation = timeNow;
-});
 section0Btn.addEventListener('click', function () {
   index = 0;
   sections[index].scrollIntoView({
@@ -199,22 +260,19 @@ section1Btn.addEventListener('click', function () {
   index = 1;
   sections[index].scrollIntoView({
     behavior: 'smooth'
-  });
-  toggleText(index, 'show');
+  }); //toggleText(index, 'show');
 });
 section2Btn.addEventListener('click', function () {
   index = 2;
   sections[index].scrollIntoView({
     behavior: 'smooth'
-  });
-  toggleText(index, 'show');
+  }); //toggleText(index, 'show');
 });
 section3Btn.addEventListener('click', function () {
   index = 3;
   sections[index].scrollIntoView({
     behavior: 'smooth'
-  });
-  toggleText(index, 'show');
+  }); //toggleText(index, 'show');
 }); // SOLUTION WITH LOOP
 //section1Btn.addEventListener('click', () => {
 //     index = 1;
@@ -224,7 +282,7 @@ section3Btn.addEventListener('click', function () {
 //         }
 //     })
 // });
-},{}],"../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./main.scss":"main.scss"}],"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -252,7 +310,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49900" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55082" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -427,5 +485,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","main.js"], null)
+},{}]},{},["../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","main.js"], null)
 //# sourceMappingURL=/main.1f19ae8e.js.map

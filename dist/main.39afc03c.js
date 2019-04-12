@@ -184,12 +184,12 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":"../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"main.css":[function(require,module,exports) {
+},{"./bundle-url":"../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"main.scss":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./assets/background_highres.jpg":[["background_highres.2d60b9cb.jpg","assets/background_highres.jpg"],"assets/background_highres.jpg"],"./assets/logo.png":[["logo.e9a9c890.png","assets/logo.png"],"assets/logo.png"],"./assets/portfolio_picture_duotone_noBG.png":[["portfolio_picture_duotone_noBG.056981e3.png","assets/portfolio_picture_duotone_noBG.png"],"assets/portfolio_picture_duotone_noBG.png"],"./assets/linkedin.png":[["linkedin.90c4945d.png","assets/linkedin.png"],"assets/linkedin.png"],"./assets/github.png":[["github.23c538a5.png","assets/github.png"],"assets/github.png"],"./assets/instagram.png":[["instagram.77044c70.png","assets/instagram.png"],"assets/instagram.png"],"./assets/upf.jpg":[["upf.85938468.jpg","assets/upf.jpg"],"assets/upf.jpg"],"./assets/sofa.png":[["sofa.5ee9a200.png","assets/sofa.png"],"assets/sofa.png"],"./assets/SAP-Logo.svg":[["SAP-Logo.68c771d5.svg","assets/SAP-Logo.svg"],"assets/SAP-Logo.svg"],"./assets/mannheim.png":[["mannheim.8f94c44b.png","assets/mannheim.png"],"assets/mannheim.png"],"_css_loader":"../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./assets/logo2.svg":[["logo2.9dc35042.svg","assets/logo2.svg"],"assets/logo2.svg"],"./assets/portfolio_pic_v2.png":[["portfolio_pic_v2.c0dcd53b.png","assets/portfolio_pic_v2.png"],"assets/portfolio_pic_v2.png"],"./assets/barcelona.svg":[["barcelona.144547a9.svg","assets/barcelona.svg"],"assets/barcelona.svg"],"./assets/linkedin.png":[["linkedin.90c4945d.png","assets/linkedin.png"],"assets/linkedin.png"],"./assets/github.png":[["github.23c538a5.png","assets/github.png"],"assets/github.png"],"./assets/instagram.png":[["instagram.77044c70.png","assets/instagram.png"],"assets/instagram.png"],"_css_loader":"../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -217,7 +217,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49900" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55082" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -392,5 +392,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js"], null)
-//# sourceMappingURL=/main.af46ece4.js.map
+},{}]},{},["../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js"], null)
+//# sourceMappingURL=/main.39afc03c.js.map
