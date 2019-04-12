@@ -16,5 +16,13 @@
   "bugs": {
     "url": "https://github.com/mila-sevilla/Personal-Website/issues"
   },
-  "homepage": "https://github.com/mila-sevilla/Personal-Website#readme"
+  "homepage": "https://github.com/mila-sevilla/Personal-Website#readme",
+  "devDependencies": {
+    "css-loader": "^2.1.1",
+    "node-sass": "^4.11.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0"
+  }
 }

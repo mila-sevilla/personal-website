@@ -1,0 +1,217 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-family: 'Raleway', sans-serif;
+  background: #16223B;
+  line-height: 1.5; }
+
+h1, h2, h3 {
+  font-family: 'Satisfy', cursive;
+  color: #EFE4E4; }
+
+h2 {
+  font-size: 80px;
+  padding: 0;
+  text-align: center;
+  margin-bottom: 20px; }
+
+p {
+  color: #EFE4E4;
+  font-size: 16px; }
+
+button:hover,
+a:hover {
+  cursor: pointer; }
+
+button:focus,
+a:focus {
+  outline: none !important;
+  transform: scale(1.1); }
+
+/*////////////////////////// Welcome/ Intro Section ///////////////////////////////////////////////*/
+.content {
+  height: 100vh; }
+
+.logo {
+  background: url("/logo2.9dc35042.svg") center no-repeat;
+  background-size: 51px auto;
+  height: 70px;
+  width: 100px;
+  position: fixed;
+  z-index: 99; }
+  .logo > button {
+    display: block;
+    height: 70px;
+    width: 100px;
+    border: none;
+    background-color: transparent; }
+
+.entry_animation.show {
+  animation: HeroAnimation;
+  animation-duration: 3s;
+  animation-delay: 0.1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.02, 0.8, 0.2, 1); }
+
+.introContent {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; }
+  .introContent h1 {
+    font-size: 105px;
+    width: 100%;
+    height: 125px;
+    text-align: center;
+    margin: 50px 20px 0px 20px;
+    opacity: 0.01; }
+  .introContent_portrait {
+    background: url("/portfolio_pic_v2.c0dcd53b.png") center top no-repeat;
+    background-size: 156px;
+    width: 100%;
+    height: 156px;
+    margin: 20px 0px;
+    opacity: 0.01; }
+  .introContent_text {
+    margin: 0px 38px;
+    opacity: 0.01; }
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-basis: 200px; }
+  nav svg {
+    position: relative;
+    top: -8px;
+    left: -2px;
+    z-index: -1; }
+  nav > button {
+    width: 170px;
+    height: 47px;
+    border: none;
+    background-color: Transparent;
+    padding: 20px 40px 7px 40px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    color: #EFE4E4;
+    text-decoration: none;
+    text-align: center;
+    margin: 10px 1.5em; }
+
+.section0Btn:hover {
+  cursor: pointer; }
+
+/*////////////////////////// About Me Section ///////////////////////////////////////////////*/
+.aboutMeContent {
+  margin: 20px 20px 0px 20px; }
+  .aboutMeContent h2 {
+    background: url("/barcelona.144547a9.svg") left center no-repeat;
+    background-size: 94px;
+    width: 280px; }
+  .aboutMeContent_heading {
+    display: flex;
+    width: 100%;
+    justify-content: center; }
+  .aboutMeContent .date {
+    font-weight: 700; }
+
+.timeline {
+  position: relative;
+  margin: 0px 20px; }
+  .timeline .aboutMeCV_descr:last-child {
+    margin-bottom: 0px; }
+
+.line {
+  content: '';
+  position: absolute;
+  width: 3px;
+  background-color: white;
+  left: -20px;
+  opacity: 0.5;
+  top: 6px;
+  bottom: 6px; }
+
+.date::after {
+  content: '';
+  position: absolute;
+  border: 5px solid white;
+  border-radius: 50%;
+  opacity: 0.9;
+  left: -23px;
+  margin-top: 5px; }
+
+@keyframes HeroAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+
+/* //////////////////////////////// Contact Section /////////////////////////////////////////// */
+.contactContent {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-flow: row wrap;
+  width: 100vw;
+  height: 100vh;
+  color: white;
+  grid-auto-rows: minmax(60px, auto); }
+
+.contactContent > h2 {
+  width: 100%;
+  text-align: center; }
+
+.contactContent > .socialIcons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  width: 100%;
+  text-align: center;
+  height: 120px;
+  margin: 10px 0 0 0; }
+
+.linkedIn,
+.github,
+.instagram {
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+  text-align: center;
+  padding: 75px 0 20px 0;
+  margin: 0px 30px;
+  background-position: center top;
+  transition: all .2s ease-in-out; }
+
+.linkedIn:hover,
+.github:hover,
+.instagram:hover,
+.email:hover {
+  transform: scale(1.1); }
+
+.linkedIn {
+  background: url("/linkedin.90c4945d.png") center top no-repeat; }
+
+.github {
+  background: url("/github.23c538a5.png") center top no-repeat; }
+
+.instagram {
+  background: url("/instagram.77044c70.png") center top no-repeat; }
+
+.email {
+  color: #D26F28;
+  font-size: 20px;
+  padding: 10px;
+  transition: all .2s ease-in-out; }
+
+/* //////////////////////////////// Media Queries /////////////////////////////////////////// */
+
+
+/*# sourceMappingURL=/main.39afc03c.css.map */
