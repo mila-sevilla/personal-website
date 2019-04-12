@@ -189,7 +189,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./assets/logo.svg":[["logo.b37d81ec.svg","assets/logo.svg"],"assets/logo.svg"],"./assets/portfolio_pic_v2.png":[["portfolio_pic_v2.c0dcd53b.png","assets/portfolio_pic_v2.png"],"assets/portfolio_pic_v2.png"],"./assets/barcelona.svg":[["barcelona.144547a9.svg","assets/barcelona.svg"],"assets/barcelona.svg"],"./assets/linkedin.png":[["linkedin.90c4945d.png","assets/linkedin.png"],"assets/linkedin.png"],"./assets/github.png":[["github.23c538a5.png","assets/github.png"],"assets/github.png"],"./assets/instagram.png":[["instagram.77044c70.png","assets/instagram.png"],"assets/instagram.png"],"./assets/upf.jpg":[["upf.85938468.jpg","assets/upf.jpg"],"assets/upf.jpg"],"./assets/sofa.png":[["sofa.5ee9a200.png","assets/sofa.png"],"assets/sofa.png"],"./assets/SAP-Logo.svg":[["SAP-Logo.68c771d5.svg","assets/SAP-Logo.svg"],"assets/SAP-Logo.svg"],"./assets/mannheim.png":[["mannheim.8f94c44b.png","assets/mannheim.png"],"assets/mannheim.png"],"_css_loader":"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"main.js":[function(require,module,exports) {
+},{"./assets/logo.svg":[["logo.b37d81ec.svg","assets/logo.svg"],"assets/logo.svg"],"./assets/portfolio_pic_v2.png":[["portfolio_pic_v2.c0dcd53b.png","assets/portfolio_pic_v2.png"],"assets/portfolio_pic_v2.png"],"./assets/barcelona.svg":[["barcelona.144547a9.svg","assets/barcelona.svg"],"assets/barcelona.svg"],"./assets/linkedin.png":[["linkedin.90c4945d.png","assets/linkedin.png"],"assets/linkedin.png"],"./assets/github.png":[["github.23c538a5.png","assets/github.png"],"assets/github.png"],"./assets/instagram.png":[["instagram.77044c70.png","assets/instagram.png"],"assets/instagram.png"],"_css_loader":"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"main.js":[function(require,module,exports) {
 "use strict";
 
 require("./main.scss");
@@ -198,72 +198,57 @@ var sections = document.querySelectorAll('section');
 var section0Btn = document.querySelector('.section0Btn');
 var section1Btn = document.querySelector('.section1Btn');
 var section2Btn = document.querySelector('.section2Btn');
-var section3Btn = document.querySelector('.section3Btn'); // const introContent= document.querySelector('.introContent');
-// const aboutMeContent = document.querySelector('.aboutMeContent');
-// const portfolioContent = document.querySelector('.portfolioContent');
-// const contactContent = document.querySelector('.contactContent');
-// const sectionsTexts = [section0Btn.querySelector('.text'), section1Btn.querySelector('.text'), section2Btn.querySelector('.text'), section3Btn.querySelector('.text')];
-
-var sectionsTexts = [sections[0].querySelector('.text'), sections[1].querySelector('.text'), sections[2].querySelector('.text'), sections[3].querySelector('.text')]; // const sectionsTexts = [introContent.querySelector('.text'), aboutMeContent.querySelector('.text'), portfolioContent.querySelector('.text'), contactContent.querySelector('.text')];
-
+var section3Btn = document.querySelector('.section3Btn');
 var idlePeriod = 200;
 var animationDuration = 1000;
 var lastAnimation = 0;
-var index = 0; // const toggleText = (index, state) => {
-//     if (state === 'show') {
-//       sections[index].querySelector('.text').classList.add('show');  
-//     } else {
-//       sections[index].querySelector('.text').classList.remove('show');  
-//     } 
-// }
+var index = 0;
+var entry_animation = sections[0].querySelectorAll('.entry_animation');
 
-var toggleText = function toggleText(index, state) {
+var toggleText = function toggleText(i, state) {
   if (state === 'show') {
-    sectionsTexts[index].classList.add('show');
+    for (var i = 0; i < entry_animation.length; i++) {
+      entry_animation[i].classList.add('show');
+    }
   } else {
-    sectionsTexts[index].classList.remove('show');
+    entry_animation[i].classList.remove('show');
   }
 };
 
-toggleText(0, 'show');
-document.addEventListener('wheel', function (event) {
-  var delta = event.wheelDelta;
-  var timeNow = new Date().getTime(); // Cancel scroll if currently animating or within quiet period
+toggleText(0, 'show'); // document.addEventListener('wheel', event => {
+//     var delta = event.wheelDelta;
+//     var timeNow = new Date().getTime();
+//     // Cancel scroll if currently animating or within quiet period
+//     if (timeNow - lastAnimation < idlePeriod + animationDuration) {
+//       event.preventDefault();
+//       return;
+//     }
+//     // scrolling down
+//     if (delta < 0) {
+//         if (index > 2) return;
+//         toggleText(index, 'hide');
+//         index++;
+//         sections.forEach((section, i) => {       
+//             if (i === index) {
+//             toggleText(i, 'show');
+//             section.scrollIntoView({behavior: "smooth"});
+//             }
+//         })
+//     // scrolling up
+//     } else {
+//         if (index < 1) return;
+//         toggleText(index, 'hide');
+//         index--;
+//         sections.forEach((section, i) => {
+//             if (i === index) {
+//             toggleText(i, 'show');
+//             section.scrollIntoView({behavior: "smooth"});
+//             }
+//         })
+//     }  
+//     lastAnimation = timeNow;
+// })
 
-  if (timeNow - lastAnimation < idlePeriod + animationDuration) {
-    event.preventDefault();
-    return;
-  } // scrolling down
-
-
-  if (delta < 0) {
-    if (index > 2) return;
-    toggleText(index, 'hide');
-    index++;
-    sections.forEach(function (section, i) {
-      if (i === index) {
-        toggleText(i, 'show');
-        section.scrollIntoView({
-          behavior: "smooth"
-        });
-      }
-    }); // scrolling up
-  } else {
-    if (index < 1) return;
-    toggleText(index, 'hide');
-    index--;
-    sections.forEach(function (section, i) {
-      if (i === index) {
-        toggleText(i, 'show');
-        section.scrollIntoView({
-          behavior: "smooth"
-        });
-      }
-    });
-  }
-
-  lastAnimation = timeNow;
-});
 section0Btn.addEventListener('click', function () {
   index = 0;
   sections[index].scrollIntoView({
@@ -275,22 +260,19 @@ section1Btn.addEventListener('click', function () {
   index = 1;
   sections[index].scrollIntoView({
     behavior: 'smooth'
-  });
-  toggleText(index, 'show');
+  }); //toggleText(index, 'show');
 });
 section2Btn.addEventListener('click', function () {
   index = 2;
   sections[index].scrollIntoView({
     behavior: 'smooth'
-  });
-  toggleText(index, 'show');
+  }); //toggleText(index, 'show');
 });
 section3Btn.addEventListener('click', function () {
   index = 3;
   sections[index].scrollIntoView({
     behavior: 'smooth'
-  });
-  toggleText(index, 'show');
+  }); //toggleText(index, 'show');
 }); // SOLUTION WITH LOOP
 //section1Btn.addEventListener('click', () => {
 //     index = 1;
@@ -328,7 +310,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52738" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49409" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

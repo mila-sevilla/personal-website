@@ -189,7 +189,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./assets/logo.svg":[["logo.b37d81ec.svg","assets/logo.svg"],"assets/logo.svg"],"./assets/portfolio_pic_v2.png":[["portfolio_pic_v2.c0dcd53b.png","assets/portfolio_pic_v2.png"],"assets/portfolio_pic_v2.png"],"./assets/barcelona.svg":[["barcelona.144547a9.svg","assets/barcelona.svg"],"assets/barcelona.svg"],"./assets/linkedin.png":[["linkedin.90c4945d.png","assets/linkedin.png"],"assets/linkedin.png"],"./assets/github.png":[["github.23c538a5.png","assets/github.png"],"assets/github.png"],"./assets/instagram.png":[["instagram.77044c70.png","assets/instagram.png"],"assets/instagram.png"],"./assets/upf.jpg":[["upf.85938468.jpg","assets/upf.jpg"],"assets/upf.jpg"],"./assets/sofa.png":[["sofa.5ee9a200.png","assets/sofa.png"],"assets/sofa.png"],"./assets/SAP-Logo.svg":[["SAP-Logo.68c771d5.svg","assets/SAP-Logo.svg"],"assets/SAP-Logo.svg"],"./assets/mannheim.png":[["mannheim.8f94c44b.png","assets/mannheim.png"],"assets/mannheim.png"],"_css_loader":"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./assets/logo.svg":[["logo.b37d81ec.svg","assets/logo.svg"],"assets/logo.svg"],"./assets/portfolio_pic_v2.png":[["portfolio_pic_v2.c0dcd53b.png","assets/portfolio_pic_v2.png"],"assets/portfolio_pic_v2.png"],"./assets/barcelona.svg":[["barcelona.144547a9.svg","assets/barcelona.svg"],"assets/barcelona.svg"],"./assets/linkedin.png":[["linkedin.90c4945d.png","assets/linkedin.png"],"assets/linkedin.png"],"./assets/github.png":[["github.23c538a5.png","assets/github.png"],"assets/github.png"],"./assets/instagram.png":[["instagram.77044c70.png","assets/instagram.png"],"assets/instagram.png"],"_css_loader":"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -217,7 +217,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52738" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49409" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

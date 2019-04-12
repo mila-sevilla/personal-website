@@ -41,6 +41,7 @@ h2 {
     font-size: 80px;
     padding: 0;
     text-align: center;
+    margin-bottom: 20px;
 }
 
 p {
@@ -52,14 +53,6 @@ p {
  
 .content {
     height: 100vh;
-}
-
-.text.show {
-    animation: HeroAnimation;
-    animation-duration: 3s;
-    animation-delay: 0.1s;
-    animation-fill-mode: forwards;
-    animation-timing-function: cubic-bezier(0.02, 0.8, 0.2, 1);
 }
 
 .logo {
@@ -77,6 +70,14 @@ p {
         border: none;
         background-color: transparent;
     }
+}
+
+.entry_animation.show {
+    animation: HeroAnimation;
+    animation-duration: 3s;
+    animation-delay: 0.1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.02, 0.8, 0.2, 1);
 }
 
 .introContent {
@@ -99,10 +100,12 @@ p {
         width: 100%;
         height: 156px;
         margin: 20px 0px;
+        opacity: 0;
     }
 
     &_text {
         margin: 0px 38px;
+        opacity: 0;
     }
 }
 
@@ -157,11 +160,44 @@ button {
     h2 {
         background: url("assets/barcelona.svg") left center no-repeat;
         background-size: 94px;
+        width: 280px;
+    }
+
+    &_heading {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+
+    }
+
+    .date {
+        font-weight: 700;
     }
 }
 
-.date {
-    font-weight: 700;
+.timeline {
+    height: 70%;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    width: 3px;
+    height: 80%;
+    background-color: white;
+    left: 5px;
+    opacity: 0.5;
+}
+
+.date::before {
+    content: '';
+    position: absolute;
+    /* #D26F28 */
+    border: 5px solid white; 
+    border-radius: 50%;
+    opacity: 0.9;
+    left: 0px;
+    // top: 12%;
 }
 
 
@@ -248,171 +284,171 @@ button {
 
 /* //////////////////////////////// Media Queries /////////////////////////////////////////// */
 
-@media ( min-width: 750px ) {  
-    /* .introContent {
-        top: 60%;
-    } */
+// @media ( min-width: 750px ) {  
+//     /* .introContent {
+//         top: 60%;
+//     } */
 
-    nav { 
-        flex-basis: 800px; 
-        position: fixed;
-        bottom: 50px;
-    }
+//     nav { 
+//         flex-basis: 800px; 
+//         position: fixed;
+//         bottom: 50px;
+//     }
 
-    h1 {
-        font-size: 36px;
-    }
+//     h1 {
+//         font-size: 36px;
+//     }
 
-    .content {
-        overflow: hidden;
-    }
+//     .content {
+//         overflow: hidden;
+//     }
 
-    .portrait {
-        background-size: 60%;
-        height: 100%;
-        width: 100%;
-        grid-column: 8/ span 10;
-        grid-row: 3/ span 5;
-        border-radius: 3px;
-    }
+//     .portrait {
+//         background-size: 60%;
+//         height: 100%;
+//         width: 100%;
+//         grid-column: 8/ span 10;
+//         grid-row: 3/ span 5;
+//         border-radius: 3px;
+//     }
 
-    .aboutMeContent {
-        display: grid;
-        grid-template-columns: repeat(10, 1fr);
-        grid-template-rows: repeat(10, 1fr);
-        margin: 0;
-        align-items: start;
-        justify-items: start;
-        height: 100%;
-        grid-row-gap: 1em;
-    }
+//     .aboutMeContent {
+//         display: grid;
+//         grid-template-columns: repeat(10, 1fr);
+//         grid-template-rows: repeat(10, 1fr);
+//         margin: 0;
+//         align-items: start;
+//         justify-items: start;
+//         height: 100%;
+//         grid-row-gap: 1em;
+//     }
 
-    .aboutMeContent > div > p {
-        margin: 0;
-    }
+//     .aboutMeContent > div > p {
+//         margin: 0;
+//     }
 
-    .aboutMeContent > h2 {
-        grid-column: 2/ span 3;
-        grid-row: 2;
-        border-bottom: none;
-        align-self: end;
-        margin: 0;
-        height: 16px;
-    }
+//     .aboutMeContent > h2 {
+//         grid-column: 2/ span 3;
+//         grid-row: 2;
+//         border-bottom: none;
+//         align-self: end;
+//         margin: 0;
+//         height: 16px;
+//     }
 
-    .selfDescription {
-        grid-column: 2/ span 5;
-        grid-row: 3;
-        padding: 0;
-        margin-bottom: 10px;
-    }
+//     .selfDescription {
+//         grid-column: 2/ span 5;
+//         grid-row: 3;
+//         padding: 0;
+//         margin-bottom: 10px;
+//     }
 
-    .selfDescription > p {
-        justify-self: start;
-        /* margin-top: 20px; */
-    }
+//     .selfDescription > p {
+//         justify-self: start;
+//         /* margin-top: 20px; */
+//     }
 
-    .aboutMeContent .date {
-        font-weight: 300;
-        justify-self: start;
-        float: left;
-        width: 85px;
-        margin-right: 3vw;
-    }
+//     .aboutMeContent .date {
+//         font-weight: 300;
+//         justify-self: start;
+//         float: left;
+//         width: 85px;
+//         margin-right: 3vw;
+//     }
 
-    .aboutMeCV_descr {
-        float: right;
-        width: 340px;
-    }
+//     .aboutMeCV_descr {
+//         float: right;
+//         width: 340px;
+//     }
 
-    .secondRow,
-    .thirdRow,
-    .fourthRow,
-    .fifthRow {
-        grid-column: 2 / span 5;
-        padding: 0;
-    }
+//     .secondRow,
+//     .thirdRow,
+//     .fourthRow,
+//     .fifthRow {
+//         grid-column: 2 / span 5;
+//         padding: 0;
+//     }
 
-    .secondRow, 
-    .upf_logo {
-        grid-row: 4;
-    }
+//     .secondRow, 
+//     .upf_logo {
+//         grid-row: 4;
+//     }
 
-    .thirdRow,
-    .flatsearch_logo {
-        grid-row: 5;
-    }
+//     .thirdRow,
+//     .flatsearch_logo {
+//         grid-row: 5;
+//     }
 
-    .fourthRow,
-    .sap_logo {
-        grid-row: 6;
-    }
+//     .fourthRow,
+//     .sap_logo {
+//         grid-row: 6;
+//     }
 
-    .fifthRow,
-    .mannheim_logo {
-        grid-row: 7;
-    }
-}
+//     .fifthRow,
+//     .mannheim_logo {
+//         grid-row: 7;
+//     }
+// }
 
-@media ( min-width: 970px ) {  
+// @media ( min-width: 970px ) {  
     
-    .aboutMeCV .date {
-        padding-left: 25px;
-        width: 100px;
-    }
+//     .aboutMeCV .date {
+//         padding-left: 25px;
+//         width: 100px;
+//     }
 
-    .aboutMeCV {
-        position: relative;
-    }
+//     .aboutMeCV {
+//         position: relative;
+//     }
 
-    .timeline::after {
-        content: '';
-        position: absolute;
-        width: 3px;
-        background-color: white;
-        top: 37%;
-        bottom: 34%;
-        left: 10%;
-        opacity: 0.5;
-    }
+//     .timeline::after {
+//         content: '';
+//         position: absolute;
+//         width: 3px;
+//         background-color: white;
+//         top: 37%;
+//         bottom: 34%;
+//         left: 10%;
+//         opacity: 0.5;
+//     }
 
-    .date::before {
-        content: '';
-        position: absolute;
-        /* #D26F28 */
-        border: 5px solid white; 
-        border-radius: 50%;
-        opacity: 0.9;
-        left: -3px;
-        top: 12%;
-    }
+//     .date::before {
+//         content: '';
+//         position: absolute;
+//         /* #D26F28 */
+//         border: 5px solid white; 
+//         border-radius: 50%;
+//         opacity: 0.9;
+//         left: -3px;
+//         top: 12%;
+//     }
 
-    .aboutMe_Logo {
-        height: 50px;
-        width: 50px;
-        background-size: 100%;
-        background-repeat: no-repeat;
-        grid-column: 6;
-        justify-self: end;
-        align-self: start;
-        background-position: center center;
-    }
+//     .aboutMe_Logo {
+//         height: 50px;
+//         width: 50px;
+//         background-size: 100%;
+//         background-repeat: no-repeat;
+//         grid-column: 6;
+//         justify-self: end;
+//         align-self: start;
+//         background-position: center center;
+//     }
 
-    .upf_logo {
-        background-image: url("assets/upf.jpg");
-    }
+//     .upf_logo {
+//         background-image: url("assets/upf.jpg");
+//     }
 
-    .flatsearch_logo {
-        background-image: url("assets/sofa.png");
-    }
+//     .flatsearch_logo {
+//         background-image: url("assets/sofa.png");
+//     }
 
-    .sap_logo {
-        background-image: url("assets/SAP-Logo.svg");
-    }
+//     .sap_logo {
+//         background-image: url("assets/SAP-Logo.svg");
+//     }
 
-    .mannheim_logo {
-        background-image: url("assets/mannheim.png");
-    }
-}
+//     .mannheim_logo {
+//         background-image: url("assets/mannheim.png");
+//     }
+// }
 
 
