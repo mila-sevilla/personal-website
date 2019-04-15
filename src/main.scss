@@ -9,6 +9,10 @@ $color-background: #16223B;
 $font-size-regular: 16px;
 
 //Global Declarations
+*{
+    box-sizing: border-box;
+}
+
 html,
 body {
     height: 100%;
@@ -64,6 +68,10 @@ a {
 }
 
 /*////////////////////////// Welcome/ Intro Section ///////////////////////////////////////////////*/
+header {
+    height: 50px;
+}
+
 .content {
     height: 100vh;
 }
@@ -71,17 +79,17 @@ a {
 .logo {
     background: url("assets/logo2.svg") center no-repeat;
     background-size: 51px auto;
-    height: 70px;
+    height: 40px;
+    padding-top: 30px;
     width: 100px;
     z-index: 99;
 
-    > button {
-        display: block;
-        height: 70px;
-        width: 100px;
-        border: none;
-        background-color: transparent;
-    }
+    // > a {
+    //     display: block;
+    //     height: 70px;
+    //     width: 100px;
+    //     border: none;
+    // }
 }
 
 .introContent {
@@ -117,28 +125,26 @@ nav {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    width: 100%;
     flex-basis: 200px;
     opacity: 0.01;
 
     svg {
         position: relative;
         top: -8px;
-        left: -2px;
         z-index: -1;
     }
 
-    > button {
-        width: 170px;
+    > a {
+        width: 185px;
         height: 47px;
         border: none;
-        background-color: Transparent;
-        padding: 20px 40px 7px 40px;
-        font-family: 'Raleway', sans-serif;
+        padding: 0px 40px 0px 40px;
         font-size: 18px;
         color: $color-text-light;
         text-decoration: none;
         text-align: center;
-        margin: 10px 1.5em;
+        margin: 20px 1.5em 0px 1.5em;
     }
 }
 
@@ -207,8 +213,6 @@ nav {
     margin-top: 5px;
 }
 
-
-
 @keyframes HeroAnimation {
     0% {
       opacity: 0;
@@ -220,7 +224,41 @@ nav {
       transform: translateY(0);
     }
 }
+/* //////////////////////////////// Portfolio Section /////////////////////////////////////////// */
 
+.portfolioContent {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+
+    .slide {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: start;
+    }
+
+    .slide-content {
+        width: 100vw;
+        height: 100vh;
+    }
+
+    button {
+        position: absolute;
+        top: 20%; 
+        margin: 10px;
+    }
+
+    .nextBtn {
+        right: 0;
+    }
+
+    .prevBtn {
+        left: 0;
+    }
+}
 /* //////////////////////////////// Contact Section /////////////////////////////////////////// */
 
 .contactContent {

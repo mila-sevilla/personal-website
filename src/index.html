@@ -10,12 +10,12 @@
     <link rel="stylesheet" type="text/css" media="screen" href="main.scss">
 </head>
 <body>
-    <header> 
+    <header id="introSection"> 
         <div class="logo"> <a class="section0Link" href ="#introSection" title="Go to home section"> </a> </div>
     </header>
 
     <div class="content">
-        <section class="intro" id="introSection"> 
+        <section class="intro"> 
             <div class="introContent"> 
                 <h1 class="entry_animation"> Hallo </h1> 
                 <span class="introContent_portrait entry_animation"></span>
@@ -37,7 +37,7 @@
         </section>
 
         <section class="aboutMe" id="aboutMeSection">
-            <div class="aboutMeContent text"> 
+            <div class="aboutMeContent"> 
                 <div class="aboutMeContent_heading">
                      <h2> About </h2>
                 </div>
@@ -64,65 +64,71 @@
         </section>
 
         <section class="portfolio" id="portfolioSection">
-            <div class="portfolioContent text">
+            <div class="portfolioContent" id="slider">
+                <nav class="dots"> </nav>
+                <button class="prevBtn" id="prevBtn"> Prev </button>
+                <button class="nextBtn" id="nextBtn"> Next </button>
 
-                <div class="portfolioContent_flatsearch"> 
-                    <h3>Flat-Search</h3>
-                    <div class="portfolioContent_slider">
-                        <a class="github_flatsearch" href="https://github.com/mila-sevilla/flat-search"> </a> 
-                    </div>
-                    <div class="portfolioContentDescription">
-                        <p class="portfolioContentDescription_date"> 2018 - today </p>
-                        <p class="portfolioContentDescription_text"> 
-                            A start-up I co-founded that enables users to search for flats and rooms in the Czech Repbulic, primarly targeting expats. I am responsible for the UX/ UI design, the front- end development in React and the marketing. The website is still under construction. 
-                        </p>
-                        <div class="portfolioContentDescription_skills">
-                            <span class="react"></span>
-                            <span class="css"></span>
-                            <span class="js"></span>
-                            <span class="figma"></span>
+                <div class="slide slide1"> 
+                    <div class="slide-content"> 
+                        <h3>Flat-Search</h3>
+                        <div class="portfolioContent_slider">
+                            <a class="github_flatsearch" href="https://github.com/mila-sevilla/flat-search"> </a> 
+                        </div>
+                        <div class="portfolioContentDescription">
+                            <p class="portfolioContentDescription_date"> 2018 - today </p>
+                            <p class="portfolioContentDescription_text"> 
+                                A start-up I co-founded that enables users to search for flats and rooms in the Czech Repbulic, primarly targeting expats. I am responsible for the UX/ UI design, the front- end development in React and the marketing. The website is still under construction. 
+                            </p>
+                            <div class="portfolioContentDescription_skills">
+                                <span class="react"></span>
+                                <span class="css"></span>
+                                <span class="js"></span>
+                                <span class="figma"></span>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="portfolioContent_penguin"> 
-                    <h3>Project Penguin</h3>
-                    <div class="portfolioContent_slider">
-                        <a class="github_penguin" href="https://github.com/pzhine/rti-project-penguin"> </a> 
-                    </div>
-                     <div class="portfolioContentDescription">
-                        <p class="portfolioContentDescription_date"> March 2019 </p>
-                        <p class="portfolioContentDescription_text"> 
-                            A  2D jump-and-run game created in Unity, titled “Project Penguin”.  The game was a group project to test the influence of different environments on memory. <a>LINK</a> to play game online (only on desktop).
-                        </p>
-                        <div class="portfolioContentDescription_skills">
-                            <span class="c#"></span>
-                            <span class="unity"></span>                                
-                            <span class="game_design"></span>
+                <div class="slide slide2"> 
+                    <div class="slide-content"> 
+                        <h3>Project Penguin</h3>
+                        <div class="portfolioContent_slider">
+                            <a class="github_penguin" href="https://github.com/pzhine/rti-project-penguin"> </a> 
                         </div>
-                    </div>    
+                        <div class="portfolioContentDescription">
+                            <p class="portfolioContentDescription_date"> March 2019 </p>
+                            <p class="portfolioContentDescription_text"> 
+                                A  2D jump-and-run game created in Unity, titled “Project Penguin”.  The game was a group project to test the influence of different environments on memory. <a>LINK</a> to play game online (only on desktop).
+                            </p>
+                            <div class="portfolioContentDescription_skills">
+                                <span class="c#"></span>
+                                <span class="unity"></span>                                
+                                <span class="game_design"></span>
+                            </div>
+                        </div>    
+                    </div>
                 </div> 
 
-                <div class="portfolioContent_lof"> 
-                    <h3>Lands of Fog</h3>
-                    <div class="portfolioContent_slider">
-                    </div>
-                     <div class="portfolioContentDescription">
-                        <p class="portfolioContentDescription_date"> 2018 - today </p>                            
-                        <p class="portfolioContentDescription_text"> 
-                            As part of my master thesis I designed new interactions and game elements for a virtual reality game to help children with autism. Leading a team of 3 people, I supervised each step of the process, from modeling and animating to programming the interactions. <a>LINK</a> to project.
-                        </p>
-                            <div class="portfolioContentDescription_skills">
-                                <span class="interaction_design"></span>
-                                <span class="project_management"></span>                                
-                                <span class="research"></span>
-                            </div>
-                    </div>    
+                <div class="slide slide3"> 
+                    <div class="slide-content"> 
+                        <h3>Lands of Fog</h3>
+                        <div class="portfolioContent_slider">
+                        </div>
+                        <div class="portfolioContentDescription">
+                            <p class="portfolioContentDescription_date"> 2018 - today </p>                            
+                            <p class="portfolioContentDescription_text"> 
+                                As part of my master thesis I designed new interactions and game elements for a virtual reality game to help children with autism. Leading a team of 3 people, I supervised each step of the process, from modeling and animating to programming the interactions. <a>LINK</a> to project.
+                            </p>
+                                <div class="portfolioContentDescription_skills">
+                                    <span class="interaction_design"></span>
+                                    <span class="project_management"></span>                                
+                                    <span class="research"></span>
+                                </div>
+                        </div> 
+                    </div>   
                 </div>
-                <nav class="dots"> </nav>
-            </div>
-        
-        
+            </div>   
         </section>
 
         <section class="contact" id="contactSection">
