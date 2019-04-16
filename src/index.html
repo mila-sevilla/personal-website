@@ -65,18 +65,16 @@
         </section>
 
         <section class="portfolio" id="portfolioSection">
-            <div class="portfolioContent wrapper">
+            <div class="portfolioContent">
                 <nav class="dots"> </nav>
                 <div class="button-wrapper"> 
-                    <button class="prevBtn" id="prevBtn"> Prev </button>
-                    <button class="nextBtn" id="nextBtn"> Next </button>
+                    <button class="leftButton" data-action="slideLeft"> Prev </button>
+                    <button class="rightButton" data-action="slideRight"> Next </button>
                 </div>
-                <ul class="carousel"> 
-                    <li class="card"> 
+                <ul class="carousel" data-target="carousel"> 
+                    <li class="card" data-target="card"> 
                         <h3>Flat-Search</h3>
-                        <div class="portfolioContent_slider">
-                            <a class="github_flatsearch" href="https://github.com/mila-sevilla/flat-search"> </a> 
-                        </div>
+                        <a class="github_flatsearch" href="https://github.com/mila-sevilla/flat-search"> </a> 
                         <div class="portfolioContentDescription">
                             <p class="portfolioContentDescription_date"> 2018 - today </p>
                             <p class="portfolioContentDescription_text"> 
@@ -89,15 +87,11 @@
                                 <span class="figma"></span>
                             </div>
                         </div>
-                    </div>
-                </div>
-
-                <div class="slide slide2"> 
-                    <div class="slide-content"> 
+                    </li>
+                             
+                    <li class="card" data-target="card"> 
                         <h3>Project Penguin</h3>
-                        <div class="portfolioContent_slider">
-                            <a class="github_penguin" href="https://github.com/pzhine/rti-project-penguin"> </a> 
-                        </div>
+                        <a class="github_penguin" href="https://github.com/pzhine/rti-project-penguin"> </a> 
                         <div class="portfolioContentDescription">
                             <p class="portfolioContentDescription_date"> March 2019 </p>
                             <p class="portfolioContentDescription_text"> 
@@ -109,27 +103,24 @@
                                 <span class="game_design"></span>
                             </div>
                         </div>    
-                    </div>
-                </div> 
+                    </li>
 
-                <div class="slide slide3"> 
-                    <div class="slide-content"> 
+                    <li class="card" data-target="card"> 
                         <h3>Lands of Fog</h3>
-                        <div class="portfolioContent_slider">
-                        </div>
                         <div class="portfolioContentDescription">
                             <p class="portfolioContentDescription_date"> 2018 - today </p>                            
                             <p class="portfolioContentDescription_text"> 
                                 As part of my master thesis I designed new interactions and game elements for a virtual reality game to help children with autism. Leading a team of 3 people, I supervised each step of the process, from modeling and animating to programming the interactions. <a>LINK</a> to project.
                             </p>
-                                <div class="portfolioContentDescription_skills">
-                                    <span class="interaction_design"></span>
-                                    <span class="project_management"></span>                                
-                                    <span class="research"></span>
-                                </div>
+                            <div class="portfolioContentDescription_skills">
+                                <span class="interaction_design"></span>
+                                <span class="project_management"></span>                                
+                                <span class="research"></span>
+                            </div>
                         </div> 
-                    </div>   
-                </div>
+                    </li>
+                    
+                </ul>>
             </div>   
         </section>
 

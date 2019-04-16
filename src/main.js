@@ -1,46 +1,31 @@
 import "./main.scss";
 
-let slides = document.querySelectorAll('.slide');
-let nextBtn = document.querySelector('#nextBtn');
-let prevBtn = document.querySelector('#prevBtn');
-let current = 0;
+const carousel = document.querySelector("[data-target='carousel']");
+const card = carousel.querySelector("[data-target='card']");
+const leftButton = document.querySelector("[data-action='slideLeft']");
+const rightButton = document.querySelector("[data-action='slideRight']");
 
-function reset() {
-    for(let i = 0; i < slides.length; i++) {
-        slides[i].getElementsByClassName.display = 'none';
+const carouselWidth = carousel.offsetWidth;
+const cardStyle = card.currentStyle || window.getComputedStyle(card);
+const cardMarginRight = Number(cardStyle.marginRight.match(/\d+/g)[0]);
+
+const cardCount = carousel.querySelectorAll("[data-target='card']").length;
+
+let offset = 0;
+const maxX = -(cardCount * carouselWidth + 
+               (cardMarginRight * cardCount) - 
+               carouselWidth - cardMarginRight);
+
+leftButton.addEventListener("click", function() {
+    if (offset !== 0) {
+        offset += carouselWidth + cardMarginRight;
+        carousel.style.transform = `translateX(${offset}px)`;
+        }
+});
+
+rightButton.addEventListener("click", function() {
+    if (offset !== maxX) {
+      offset -= carouselWidth + cardMarginRight;
+      carousel.style.transform = `translateX(${offset}px)`;
     }
-}
-
-function startSlide() {
-    reset();
-    slides[0].getElementsByClassName.display = 'block';
-}
-
-function slidePrev() {
-    reset();
-    slides[current - 1].style.display = 'block';
-    current--;
-}
-
-function slideNext() {
-    reset();
-    slides[current + 1].style.display = 'block';
-    current++;
-}
-
-prevBtn.addEventListener('click', function() {
-    if(current === 0) {
-        current = slides.length;
-    }
-    slidePrev();
 })
-
-nextBtn.addEventListener('click', function() {
-    if(current === slides.length - 1) {
-        current = -1;
-    }
-    slideNext();
-})
-
-startSlide();
-
