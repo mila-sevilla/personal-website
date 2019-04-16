@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "parcel src/index.html",
-    "build": "parcel build -d docs --public-url ./ src/index.html",
-    "publish": "parcel build -d docs --public-url ./ src/index.html && git add . && git commit -m \"deploy\" && git push origin"
+    "build": "parcel build -d ./ --public-url ./ src/index.html",
+    "publish": "parcel build -d ./ --public-url ./ src/index.html && git add . && git commit -m \"deploy\" && git push origin"
   },
   "repository": {
     "type": "git",
