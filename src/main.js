@@ -1,31 +1,36 @@
 import "./main.scss";
 
-const carousel = document.querySelector("[data-target='carousel']");
-const card = carousel.querySelector("[data-target='card']");
-const leftButton = document.querySelector("[data-action='slideLeft']");
-const rightButton = document.querySelector("[data-action='slideRight']");
+const slides = document.querySelectorAll('.slide');
+const prev = document.querySelector("[data-action='slideLeft']");
+const next = document.querySelector("[data-action='slideRight']");
 
-const carouselWidth = carousel.offsetWidth;
-const cardStyle = card.currentStyle || window.getComputedStyle(card);
-const cardMarginRight = Number(cardStyle.marginRight.match(/\d+/g)[0]);
+const nextSlide = () => {
+    const current = document.querySelector('.current');
+    current.classList.remove('current');
+    if(current.nextElementSibling) {
+        current.nextElementSibling.classList.add('current');
+    } else {
+        slides[0].classList.add('current');
+    }
+   setTimeout(() => current.classList.remove('current'));
+}
 
-const cardCount = carousel.querySelectorAll("[data-target='card']").length;
+const prevSlide = () => {
+    const current = document.querySelector('.current');
+    current.classList.remove('current');
+    if(current.previousElementSibling) {
+        current.previousElementSibling.classList.add('current');
+    } else {
+        // Add current class to last slide item
+        slides[slides.length - 1].classList.add('current');
+    }
+   setTimeout(() => current.classList.remove('current'));
+}
 
-let offset = 0;
-const maxX = -(cardCount * carouselWidth + 
-               (cardMarginRight * cardCount) - 
-               carouselWidth - cardMarginRight);
-
-leftButton.addEventListener("click", function() {
-    if (offset !== 0) {
-        offset += carouselWidth + cardMarginRight;
-        carousel.style.transform = `translateX(${offset}px)`;
-        }
+next.addEventListener('click', e => {
+    nextSlide();
 });
 
-rightButton.addEventListener("click", function() {
-    if (offset !== maxX) {
-      offset -= carouselWidth + cardMarginRight;
-      carousel.style.transform = `translateX(${offset}px)`;
-    }
-})
+prev.addEventListener('click', e => {
+    prevSlide();
+});
