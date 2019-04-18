@@ -1,8 +1,10 @@
 import "./main.scss";
 
+// Portfolio Carousel
 const slides = document.querySelectorAll('.slide');
 const prev = document.querySelector("[data-action='slideLeft']");
 const next = document.querySelector("[data-action='slideRight']");
+
 
 const nextSlide = () => {
     const current = document.querySelector('.current');
@@ -34,3 +36,35 @@ next.addEventListener('click', e => {
 prev.addEventListener('click', e => {
     prevSlide();
 });
+
+// Navigational Progress Dots
+
+// const updateDot = () => {
+//   if()
+// }
+
+// _updateCurrentSlideDot : function () {
+//   // update dots
+//   var dots = this.obj.querySelectorAll(".carousel-dot");
+//   for(var i = 0; i < dots.length; i++){
+//     if(i == this.slide_index){
+//       dots[this.slide_index].className += " active";
+//     } else {
+//       dots[i].className = dots[i].className.replace(/(^| )active/,"");
+//     }
+//   }
+
+// },
+
+// index = 0;
+
+// nav_dots.forEach() {
+//   if(slides.classList.contains('current')) {
+//     nav_dots.classList.add('active')
+//   } else {
+//     nav_dots.classList.remove('active')
+//   }
+
+// }
+
+

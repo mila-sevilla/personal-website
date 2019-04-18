@@ -66,7 +66,6 @@
 
         <section class="portfolio" id="portfolioSection">
             <div class="portfolioContent">
-                <nav class="dots"> </nav>
                 <div class="button-wrapper"> 
                     <button class="leftButton" data-action="slideLeft"> </button>
                     <button class="rightButton" data-action="slideRight"> </button>
@@ -74,7 +73,7 @@
                 <ul class="slider"> 
                     <li class="slide current"> 
                         <div class="portfolioContentImage">
-                            <img src="assets/flatsearch.png" alt="Image of flatsearch website" class="portfolioContentImage_flatsearch"> 
+                            <img src="assets/flatsearch.png" alt="Image of flatsearch website" class="portfolioContentImage_img flatsearch"> 
                             <h3>Flat-Search</h3>
                             <a class="github_flatsearch" href="https://github.com/mila-sevilla/flat-search"></a>
                         </div>
@@ -93,8 +92,11 @@
                     </li>
                              
                     <li class="slide"> 
-                        <h3>Project Penguin</h3>
-                        <a class="github_penguin" href="https://github.com/pzhine/rti-project-penguin"> </a> 
+                        <div class="portfolioContentImage">
+                            <img src="assets/penguin.png" alt="Image of project penguin gameplay" class="portfolioContentImage_img penguin">
+                            <h3>Project Penguin</h3>
+                            <a class="github_penguin" href="https://github.com/pzhine/rti-project-penguin"> </a> 
+                        </div>
                         <div class="portfolioContentDescription">
                             <p class="portfolioContentDescription_date"> March 2019 </p>
                             <p class="portfolioContentDescription_text"> 
@@ -109,7 +111,10 @@
                     </li>
 
                     <li class="slide"> 
-                        <h3>Lands of Fog</h3>
+                        <div class="portfolioContentImage">
+                                <img src="assets/lof.png" alt="Image of Lands of Fog gameplay" class="portfolioContentImage_img landsOfFog">
+                            <h3>Lands of Fog</h3>
+                        </div>
                         <div class="portfolioContentDescription">
                             <p class="portfolioContentDescription_date"> 2018 - today </p>                            
                             <p class="portfolioContentDescription_text"> 
@@ -122,8 +127,12 @@
                             </div>
                         </div> 
                     </li>
-                    
                 </ul>
+                <div class="nav-dots"> 
+                    <span class="nav-dot"></span>
+                    <span class="nav-dot"></span>
+                    <span class="nav-dot"></span>
+                </div>
             </div>   
         </section>
 
