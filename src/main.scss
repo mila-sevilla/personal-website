@@ -1,14 +1,20 @@
-// color variables
+// COLORS
 $color-text-light: #EFE4E4;
 $color-primary: #D27029;
 $color-secondary-dark: #134047;
 $color-secondary-light: #134047;
 $color-background: #16223B;
-//#18243D; ;
-// font size
+
+// FONT SIZE
 $font-size-regular: 16px;
 
-//Global Declarations
+/* BREAKPOINTS */
+$break-phablet: 480px;
+$break-tablet: 768px;
+$break-desktop: 1020px;
+$break-wide: 1280px;
+
+// Global Declarations
 *{
     box-sizing: border-box;
 }
@@ -78,18 +84,11 @@ header {
 }
 
 .logo {
-    background: url("assets/logo2.svg") center no-repeat;
+    background: url("assets/logo.svg") center no-repeat;
     background-size: 51px auto;
     height: 50px;
     width: 100px;
     z-index: 99;
-
-    // > a {
-    //     display: block;
-    //     height: 70px;
-    //     width: 100px;
-    //     border: none;
-    // }
 }
 
 .introContent {
@@ -315,14 +314,6 @@ nav {
     .slide.current {
         opacity: 1;
     }
-
-    h3 {
-        font-size: 37px;
-        margin: 0;
-        position: absolute;
-        bottom: -27px;
-        left: -20px;
-    }
 }
 
 .portfolioContentImage {
@@ -343,7 +334,25 @@ nav {
         max-height: 80%;
         max-width: 70%;
         margin: 1em auto;
+    }
 
+    h3 {
+        font-size: 37px;
+        margin: 0;
+        position: absolute;
+        bottom: -27px;
+        left: -20px;
+    }
+
+    a {
+        background: url("assets/github.svg") center no-repeat;
+        background-size: 80%;
+        position: absolute;
+        bottom: -12px;
+        right: -18px;
+        width: 44px;
+        height: 44px;
+        z-index: 3;
     }
 }
 
@@ -385,8 +394,7 @@ nav {
 }
 
 .linkedIn,
-.github,
-.instagram {
+.github {
     text-decoration: none;
     font-size: 18px;
     color: white;
@@ -399,21 +407,16 @@ nav {
 
 .linkedIn:hover,
 .github:hover,
-.instagram:hover,
 .email:hover {
     transform: scale(1.1);
 }
 
 .linkedIn {
-    background: url("assets/linkedin.png") center top no-repeat;
+    background: url("assets/linkedin.svg") center top no-repeat;
 }
 
 .github {
-    background: url("assets/github.png") center top no-repeat;
-}
-
-.instagram {
-    background: url("assets/instagram.png") center top no-repeat;
+    background: url("assets/github.svg") center top no-repeat;
 }
 
 .email {
