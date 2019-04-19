@@ -23,8 +23,6 @@ $break-wide: 1280px;
 
 html,
 body {
-    height: 100%;
-    width: 100%;
     margin: 0; 
     padding: 0;
     scroll-behavior: smooth;
@@ -32,19 +30,8 @@ body {
 body {
     font-family: 'Raleway', sans-serif;
     background: $color-background;
-    // -webkit-background-size: cover;
-    // -moz-background-size: cover;
-    // -o-background-size: cover;
-    // background-size: cover;
-    // background-position: 50% 0; 
-    // background-attachment: scroll;
     line-height: 1.5;
 }
-
-// section {
-//     width: 100vw;
-//     height: 100vh;
-// }
 
 h1, h2, h3 {
     font-family: 'Satisfy', cursive;
@@ -79,13 +66,14 @@ a {
 }
 
 /*////////////////////////// Welcome/ Intro Section ///////////////////////////////////////////////*/
+
 header {
     height: 50px;
     margin-top: 10px;
 }
 
 .content {
-    height: 100vh;
+    height: 100%;
 }
 
 .logo {
@@ -167,7 +155,7 @@ nav {
 /*////////////////////////// About Me Section ///////////////////////////////////////////////*/
 
 .aboutMeContent {
-    margin: 20px 20px 0px 20px;
+    margin: 20px 20px 0 20px;
 
     &_heading {
         display: flex;
@@ -226,17 +214,38 @@ nav {
 
 .portfolioContent {
     max-width: 500px;
-    height: 500px;;
+    min-height: 475px;
     position: relative;
-    margin: 80px auto 0 auto;
+    margin: 80px auto 20px auto;
+
+    .slider {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        width: 100%;
+        min-height: 475px;
+        display: flex;
+        transition: all 1s ease;
+    }
+
+    .slide {
+        opacity: 0;
+        transition: opacity 0.4s ease-in-out;
+        min-width: 100%;
+        position: absolute;
+        left: 0;
+    }
+
+    .slide.current {
+        opacity: 1;
+    }
 
     .button-wrapper {
         width: 100%;
         display: flex;
         justify-content: space-between;
-        align-items: flex-end;
-        top: 81px;
         position: absolute;
+        top: 90px;
         z-index: 3;
     }
 
@@ -261,22 +270,19 @@ nav {
     .nav-dots {
         height: 9px;
         width: 100%;
-        bottom: 9px;
         display: flex;
         justify-content: center;
-        position: absolute;
-        text-align: center; 
+        align-items: center;
+        position: relative;
+        margin-top: 30px;
     }
 
     .nav-dot {
-        top: -5px;
         width: 9px;
         height: 9px;
         margin: 0 7px;
         padding: 0 4px;
-        position: relative;
         border-radius: 100%;
-        display: inline-block;
         background-color: rgba(255, 255, 255, 0.6);
         
         &:hover { 
@@ -287,31 +293,6 @@ nav {
 
     .nav-dot.active {
         background-color: #ffffff;
-    }
-
-    .slider {
-        margin: 0;
-        padding: 0;
-        list-style: none;
-        width: 100%;
-        display: flex;
-        position: absolute;
-        left: 0;
-        transition: all 1s ease;
-    }
-
-    .slide {
-        opacity: 0;
-        transition: opacity 0.4s ease-in-out;
-        min-width: 100%;
-        height: 500px;
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
-
-    .slide.current {
-        opacity: 1;
     }
 }
 
@@ -371,6 +352,7 @@ nav {
     flex-flow: row wrap;
     flex-direction: column;
     width: 100%;
+    height: 100%;
     //height: 100vh;
     color: white;
 
@@ -439,6 +421,13 @@ nav {
 
 /* //////////////////////////////// Media Queries /////////////////////////////////////////// */
 
+// @media( min-height: 580px) {
+//     section {
+//         width: 100vw;
+//         height: 100vh;
+//     }
+// }
+
 // @media ( min-width: 750px ) {  
 //     /* .introContent {
 //         top: 60%;
@@ -457,153 +446,5 @@ nav {
 //     .content {
 //         overflow: hidden;
 //     }
-
-//     .portrait {
-//         background-size: 60%;
-//         height: 100%;
-//         width: 100%;
-//         grid-column: 8/ span 10;
-//         grid-row: 3/ span 5;
-//         border-radius: 3px;
-//     }
-
-//     .aboutMeContent {
-//         display: grid;
-//         grid-template-columns: repeat(10, 1fr);
-//         grid-template-rows: repeat(10, 1fr);
-//         margin: 0;
-//         align-items: start;
-//         justify-items: start;
-//         height: 100%;
-//         grid-row-gap: 1em;
-//     }
-
-//     .aboutMeContent > div > p {
-//         margin: 0;
-//     }
-
-//     .aboutMeContent > h2 {
-//         grid-column: 2/ span 3;
-//         grid-row: 2;
-//         border-bottom: none;
-//         align-self: end;
-//         margin: 0;
-//         height: 16px;
-//     }
-
-//     .selfDescription {
-//         grid-column: 2/ span 5;
-//         grid-row: 3;
-//         padding: 0;
-//         margin-bottom: 10px;
-//     }
-
-//     .selfDescription > p {
-//         justify-self: start;
-//         /* margin-top: 20px; */
-//     }
-
-//     .aboutMeContent .date {
-//         font-weight: 300;
-//         justify-self: start;
-//         float: left;
-//         width: 85px;
-//         margin-right: 3vw;
-//     }
-
-//     .aboutMeCV_descr {
-//         float: right;
-//         width: 340px;
-//     }
-
-//     .secondRow,
-//     .thirdRow,
-//     .fourthRow,
-//     .fifthRow {
-//         grid-column: 2 / span 5;
-//         padding: 0;
-//     }
-
-//     .secondRow, 
-//     .upf_logo {
-//         grid-row: 4;
-//     }
-
-//     .thirdRow,
-//     .flatsearch_logo {
-//         grid-row: 5;
-//     }
-
-//     .fourthRow,
-//     .sap_logo {
-//         grid-row: 6;
-//     }
-
-//     .fifthRow,
-//     .mannheim_logo {
-//         grid-row: 7;
-//     }
-// }
-
-// @media ( min-width: 970px ) {  
-    
-//     .aboutMeCV .date {
-//         padding-left: 25px;
-//         width: 100px;
-//     }
-
-//     .aboutMeCV {
-//         position: relative;
-//     }
-
-//     .timeline::after {
-//         content: '';
-//         position: absolute;
-//         width: 3px;
-//         background-color: white;
-//         top: 37%;
-//         bottom: 34%;
-//         left: 10%;
-//         opacity: 0.5;
-//     }
-
-//     .date::before {
-//         content: '';
-//         position: absolute;
-//         /* #D26F28 */
-//         border: 5px solid white; 
-//         border-radius: 50%;
-//         opacity: 0.9;
-//         left: -3px;
-//         top: 12%;
-//     }
-
-//     .aboutMe_Logo {
-//         height: 50px;
-//         width: 50px;
-//         background-size: 100%;
-//         background-repeat: no-repeat;
-//         grid-column: 6;
-//         justify-self: end;
-//         align-self: start;
-//         background-position: center center;
-//     }
-
-//     .upf_logo {
-//         background-image: url("assets/upf.jpg");
-//     }
-
-//     .flatsearch_logo {
-//         background-image: url("assets/sofa.png");
-//     }
-
-//     .sap_logo {
-//         background-image: url("assets/SAP-Logo.svg");
-//     }
-
-//     .mannheim_logo {
-//         background-image: url("assets/mannheim.png");
-//     }
-// }
 
 
