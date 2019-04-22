@@ -15,6 +15,7 @@ $break-phablet: 480px;
 $break-tablet: 700px;
 $break-desktop: 1000px;
 $break-wide: 1280px;
+$break-height: 700px;
 
 // Global Declarations
 *{
@@ -444,16 +445,27 @@ nav {
 
 /* //////////////////////////////// Media Queries /////////////////////////////////////////// */
 
+@media (min-width: $break-tablet) and (min-height: $break-height) {
+    section {
+        height: 100vh;
+    }
+}
+
+
 @media (min-width: $break-tablet) {
+
+    .logo {
+        background: url("assets/logo.svg") center no-repeat;
+        background-size: 61px auto;
+        height: 50px;
+        width: 100px;
+        z-index: 99;
+    }
 
     h2 {
         font-size: 100px;
         background-size: 122px;
         width: 380px;
-    }
-
-    section {
-        height: 100vh;
     }
 
     .introContent {   
@@ -466,7 +478,7 @@ nav {
             height: 250px;
             grid-column: 3;
             grid-row: 1;
-            margin: 0 0 0 -40px;
+            margin: 0 0 0 -70px;
             width: 400px;
             justify-self: start;
         }
