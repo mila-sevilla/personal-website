@@ -335,7 +335,6 @@ nav {
     border-radius: 3px;
 
     &_img {
-        max-height: 80%;
         max-width: 70%;
         margin: 1em auto;
     }
@@ -543,12 +542,72 @@ nav {
 
 @media (min-width: $break-desktop) {
 
+    .portfolio {
+        display: flex;
+        justify-content: center;
+    }
+    
     .portfolioContent {
+        width: 900px;
+        height: 500px;
 
         &Image {
             height: 450px;
-            min-width: 600px;
+            width: 500px;
+            background: none;
+            box-shadow: none;
+            border-radius: none;
+            margin: 0 0 0 30px;
+
+            &_img {
+                max-width: 500px;
+                margin: 0;
+            }
+
+            a {
+                left: -29px;
+                bottom: -10px;
+            }
+
+            h3 {
+                font-size: 60px;
+                left: -90px;
+                top: -63px;
+            }
         }
+
+        .slide {
+            background: $color-secondary-light;
+            box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.12), 0px 0px 2px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 3px;
+            width: 100%;
+            height: 100%;
+            justify-content: space-around;
+            align-items: center;
+            display: flex;
+        }
+
+        &Description {
+            width: 300px;
+            margin: 0 0 20px 0;
+            padding: 30px;
+        }
+
+        .button-wrapper {
+            top: 45%;
+        }
+
+        .leftButton{
+            margin-left: -2em;
+        }
+
+        .rightButton{
+            margin-right: -2em;
+        }
+
+       .nav-dots {
+           margin: 0 0 20px 0;
+       }
     }
 }
 
