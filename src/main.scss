@@ -488,8 +488,12 @@ nav {
         background: url("assets/logo.svg") center no-repeat;
         background-size: 61px auto;
         height: 50px;
-        width: 100px;
+        width: 80px;
+        padding: 10px;
         z-index: 99;
+        position: absolute;
+        top: 20px;
+        left: 15px;
     }
 
     h2 {
