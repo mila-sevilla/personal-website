@@ -17,6 +17,9 @@ $break-desktop: 1000px;
 $break-wide: 1280px;
 $break-height: 700px;
 
+//ANIMATIONS
+$hover-transition: all .2s ease-in-out;
+
 // Global Declarations
 *{
     box-sizing: border-box;
@@ -70,7 +73,9 @@ a {
 
 header {
     height: 50px;
+    width: 100%;
     margin-top: 10px;
+    justify-self: flex-start;
 }
 
 .content {
@@ -78,7 +83,6 @@ header {
 }
 
 .logo {
-    background: url("assets/logo.svg") center no-repeat;
     background-size: 51px auto;
     height: 50px;
     width: 100px;
@@ -90,6 +94,8 @@ header {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
 
     h1 {
         font-size: 105px;
@@ -144,7 +150,24 @@ nav {
         text-decoration: none;
         text-align: center;
         margin: 20px 1.5em 0px 1.5em;
+        display: inline-block;
+        transition: $hover-transition;
+        //background: url("assets/stroke.svg") no-repeat center;
     }
+
+    // > a::after {
+    //     content: '';
+    //     display: block;
+    //     width: 0;
+    //     height: 10px;
+    //     background: url("assets/stroke.svg") no-repeat center;
+    //     transition: width .3s;
+    // }
+
+    // >a:hover::after {
+    //     width: 100%;
+    //     transition: width .3s;
+    // }
 }
 
 .entry_animation {
@@ -177,9 +200,6 @@ nav {
 }
 
 .timeline {
-    // display: flex;
-    // flex-flow: row wrap;
-    // flex-basis: 320px;
     position: relative;
     margin: 0px 20px;
 
@@ -241,15 +261,23 @@ nav {
 .portfolioContent {
     max-width: 880px;
     position: relative;
-    margin: 80px auto 20px auto;
+    margin: 0 auto;
+    height: 100%;
+    min-height: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
     .slider {
         margin: 0;
         padding: 0;
         list-style: none;
         width: 100%;
-        min-height: 470px;
+        height: 100%;
+        min-height: 600px;
         display: flex;
+        align-items: center;
         transition: all 1s ease;
     }
 
@@ -257,6 +285,7 @@ nav {
         opacity: 0;
         transition: opacity 0.4s ease-in-out;
         min-width: 100%;
+        max-height: 500px;
         position: absolute;
         left: 0;
     }
@@ -270,7 +299,7 @@ nav {
         display: flex;
         justify-content: space-between;
         position: absolute;
-        top: 90px;
+        top: 28%;
         z-index: 3;
     }
 
@@ -281,6 +310,7 @@ nav {
         height: 44px;
         width: 44px;
         margin-left: 2em;
+        transition: $hover-transition;
     }
 
     .rightButton {
@@ -290,16 +320,15 @@ nav {
         height: 44px;
         width: 44px;
         margin-right: 2em;
+        transition: $hover-transition;
     }
 
     .nav-dots {
-        height: 9px;
         width: 100%;
         display: flex;
         justify-content: center;
-        align-items: center;
-        position: relative;
-        margin-top: 30px;
+        align-self: flex-end;
+        margin-bottom: 50px;
     }
 
     .nav-dot {
@@ -323,7 +352,6 @@ nav {
 
 .portfolioContentImage {
     min-height: 200px;
-    //height: 50%;
     width: 80%;
     background: $color-secondary-light;
     margin: 0 auto 50px auto;
@@ -402,7 +430,7 @@ nav {
         height: 100px;
         width: 300px;
         margin: 0 auto;
-        transition: all .2s ease-in-out;
+        transition: $hover-transition;
         text-align: center;
         text-decoration: none; 
     }
@@ -427,7 +455,7 @@ nav {
     padding: 75px 0 20px 0;
     margin: 0px 30px;
     background-position: center top;
-    transition: all .2s ease-in-out;
+    transition: $hover-transition;
 }
 
 .linkedin:hover,
@@ -471,44 +499,67 @@ nav {
     }
 
     .introContent {   
-        display: grid;
-        grid-template-columns: auto 1fr 1fr auto;
-        grid-template-rows: auto;
+        // display: grid;
+        // grid-template-columns: auto 1fr 1fr auto;
+        // grid-template-rows: auto;
+        //margin-right: 50em;
+
+        &_wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-height: 500px;
+            width: 100%;
+            max-width: 671px;
+            flex-direction: column;
+        }
 
         h1 {
             font-size: 180px;
-            height: 250px;
-            grid-column: 3;
-            grid-row: 1;
-            margin: 0 0 0 -90px;
-            width: 400px;
-            justify-self: start;
+            height: 211px;
+            display: flex;
+            align-items: center;
+            // grid-column: 3;
+            // grid-row: 1;
+            // margin: 0 0 0 -90px;
+            width: 366px;
+            order: 2;
+            margin: 0 0 0 -84px;
+            text-align: start;
+            // justify-self: start;
         }
     
         &_portrait {
             background: url("assets/portfolio_pic_medium.webp") center no-repeat;
-            background-size: 270px;
+            //background-size: 270px;
             height: 400px;
-            width: 270px;
-            margin: 0 25px 0 25px;
-            grid-column: 2;
-            grid-row: 1 / span 2;
-            justify-self: end;
-            align-self: end;
+            width: 295px;
+            order: 1;
+            margin: 0;
+            justify-self: flex-end;
+            // width: 270px;
+            // margin: 0 25px 0 25px;
+            // grid-column: 2;
+            // grid-row: 1 / span 2;
+            // justify-self: end;
+            // align-self: end;
         }
     
         &_text {
             width: 295px;
-            grid-column: 3;
-            grid-row: 2;
+            // grid-column: 3;
+            // grid-row: 2;
             margin: 0;
+            order: 3;
+            align-self: flex-start;
         }
     
         nav {
             flex-wrap: nowrap;
-            grid-column: 2 / span 3;
-            grid-row: 3;
+            // grid-column: 2 / span 3;
+            // grid-row: 3;
             margin-top: 80px;
+            min-width: 100%;
         }
     }
 
@@ -536,13 +587,6 @@ nav {
         }
     }
 
-    .portfolioContent {
-
-        .button-wrapper {
-            top: 130px;
-        }
-    }
-
     .contactContent {
         
         h2 {
@@ -552,6 +596,7 @@ nav {
     }
 
 }
+
 
 @media (min-width: $break-desktop) {
 
