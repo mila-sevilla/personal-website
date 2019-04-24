@@ -1,4 +1,4 @@
-import "./main.scss";
+import "./styles/main.scss";
 
 // Full page scroll on desktop
 // const sections = document.querySelectorAll('section');

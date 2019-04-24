@@ -1,0 +1,88 @@
+.contactContent {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    //height: 100vh;
+    color: white;
+
+
+    h2 {
+        width: 350px;
+        margin-bottom: 0;
+    }
+
+    h4 {
+        width: 100%;
+        font-weight: $font-weight-regular;
+        font-size: 24px;
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    .email {
+        background: url("../assets/mail.svg") center top no-repeat;
+        color: #D26F28;
+        font-size: 20px;
+        padding-top: 60px;
+        height: 100px;
+        width: 300px;
+        margin: 0 auto;
+        transition: $hover-transition;
+        text-align: center;
+        text-decoration: none; 
+    }
+
+    .socialIcons {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        text-align: center;
+        height: 120px;
+        margin: 10px 0 20px 0;
+    }
+}
+
+
+.linkedin,
+.github {
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    text-align: center;
+    padding: 75px 0 20px 0;
+    margin: 0px 30px;
+    background-position: center top;
+    transition: $hover-transition;
+}
+
+.linkedin:hover,
+.github:hover,
+.email:hover {
+    transform: scale(1.1);
+}
+
+
+.linkedin {
+    background: url("../assets/linkedin.svg") center top no-repeat;
+}
+
+.github {
+    background: url("../assets/github_nofill.svg") center top no-repeat;
+}
+
+/* //////////////////////////////// Media Queries /////////////////////////////////////////// */
+
+@media (min-width: $break-tablet) {
+
+    .contactContent {
+        
+        h2 {
+            width: 430px;
+            margin-top: 20px;
+        }
+    }
+
+}

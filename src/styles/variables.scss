@@ -1,0 +1,80 @@
+// COLORS
+$color-text-light: #EFE4E4;
+$color-primary: #D27029;
+$color-secondary-dark: #134047;
+$color-secondary-light: #134047;
+$color-background: #16223B;
+
+// FONT SIZE & WEIGHT
+$font-size-regular: 16px;
+$font-weight-regular: 300;
+$font-weight-bold: 700;
+
+// BREAKPOINTS 
+$break-phablet: 480px;
+$break-tablet: 700px;
+$break-desktop: 1000px;
+$break-wide: 1280px;
+$break-height: 700px;
+
+//ANIMATIONS
+$hover-transition: all .2s ease-in-out;
+
+// GLOBAL
+*{
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0; 
+    padding: 0;
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Raleway', sans-serif;
+    background: $color-background;
+    line-height: 1.5;
+}
+
+h1, h2, h3 {
+    font-family: 'Satisfy', cursive;
+    color: $color-text-light;
+}
+
+h2 {
+    font-size: 80px;
+    padding: 0;
+    text-align: center;
+    margin-bottom: 20px;
+    background: url("../assets/barcelona.svg") left center no-repeat;
+    background-size: 94px;
+    width: 280px;
+}
+
+p {
+    color: $color-text-light;
+    font-size: $font-size-regular;
+}
+
+button, 
+a {
+    &:hover {
+    cursor: pointer;
+    }
+
+    &:focus {
+        outline: none !important;
+        transform: scale(1.1);
+    }
+}
+
+@media (min-width: $break-tablet) and (min-height: $break-height) {
+    section {
+        height: 100vh;
+    }
+
+    body {
+        border: 15px solid white;
+    }
+}
