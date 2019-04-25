@@ -1,5 +1,45 @@
 import "./styles/main.scss";
 
+// Portfolio Carousel
+
+//For IE:
+//const slides = Array.prototype.slice.call(document.querySelectorAll('.slide'));
+const slides = document.querySelectorAll('.slide')
+const prev = document.querySelector("[data-action='slideLeft']")
+const next = document.querySelector("[data-action='slideRight']")
+
+let currentSlide = 0
+
+function nextSlide() {
+    slides[currentSlide].classList.remove('current')
+
+    if (currentSlide === slides.length - 1) {
+        currentSlide = 0
+    } else {
+        currentSlide++
+    }
+
+    slides[currentSlide].classList.add('current')
+
+}
+
+const prevSlide = () => {
+    slides[currentSlide].classList.remove('current')
+
+    if (currentSlide === 0) {
+        currentSlide = slides.length - 1
+    } else {
+        currentSlide--
+    }
+
+    slides[currentSlide].classList.add('current')
+
+}
+
+next.addEventListener('click', nextSlide)
+
+prev.addEventListener('click', prevSlide)
+
 // Full page scroll on desktop
 // const sections = document.querySelectorAll('section');
 // // const section0Link = document.querySelector('.section0Link');
@@ -11,10 +51,7 @@ import "./styles/main.scss";
 // let lastAnimation = 0;
 // let index = 0;
 
-// Portfolio Carousel
-const slides = document.querySelectorAll('.slide');
-const prev = document.querySelector("[data-action='slideLeft']");
-const next = document.querySelector("[data-action='slideRight']");
+
 
 // //Full page scroll on desktop with mouse wheel
 
@@ -52,36 +89,7 @@ const next = document.querySelector("[data-action='slideRight']");
 
 // Portfolio Carousel
 
-const nextSlide = () => {
-    const current = document.querySelector('.current');
-    current.classList.remove('current');
-    if(current.nextElementSibling) {
-        current.nextElementSibling.classList.add('current');
-    } else {
-        slides[0].classList.add('current');
-    }
-   setTimeout(() => current.classList.remove('current'));
-}
 
-const prevSlide = () => {
-    const current = document.querySelector('.current');
-    current.classList.remove('current');
-    if(current.previousElementSibling) {
-        current.previousElementSibling.classList.add('current');
-    } else {
-        // Add current class to last slide item
-        slides[slides.length - 1].classList.add('current');
-    }
-   setTimeout(() => current.classList.remove('current'));
-}
-
-next.addEventListener('click', e => {
-    nextSlide();
-});
-
-prev.addEventListener('click', e => {
-    prevSlide();
-});
 
 // Navigational Progress Dots
 

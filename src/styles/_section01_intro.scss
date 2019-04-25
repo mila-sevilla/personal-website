@@ -1,3 +1,5 @@
+@import "./mixins";
+
 header {
     height: 50px;
     width: 100%;
@@ -18,10 +20,7 @@ header {
 }
 
 .introContent {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 100%;
+    @include flexCenter(row, wrap);
     height: 100%;
 
     h1 {

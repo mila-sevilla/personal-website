@@ -34,10 +34,9 @@
     &_line {
         content: '';
         position: absolute;
-        width: 3px;
-        background-color: white;
-        left: -20px;
-        opacity: 0.5;
+        width: 2px; 
+        background-color: #C4C4C4;
+        left: -19px;
         top: 8px;
         bottom: 6px;
     }
@@ -50,9 +49,8 @@
     .date::after {
         content: '';
         position: absolute;
-        border: 5px solid white; 
+        border: 5px solid #C4C4C4; 
         border-radius: 50%;
-        opacity: 0.9;
         left: -23px;
         margin-top: 7px;
     }

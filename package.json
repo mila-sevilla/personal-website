@@ -30,7 +30,7 @@
     "webpack-cli": "^3.3.0"
   },
   "dependencies": {
-    "assemble": "^0.3.83",
+    "assemble": "^0.24.3",
     "grunt": "^0.4.5",
     "styles": "^0.2.1",
     "zenscroll": "^4.0.2"
