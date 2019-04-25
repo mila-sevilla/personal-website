@@ -2,10 +2,7 @@
     margin: 20px 20px 0 20px;
 
     &_heading {
-        display: flex;
-        width: 100%;
-        justify-content: center;
-
+        @include flexCenter(row, nowrap);
     }
 
     .date {

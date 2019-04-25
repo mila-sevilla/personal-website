@@ -48,10 +48,7 @@ header {
 }
 
 nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    @include flexCenter(row, wrap);
     flex-basis: 185px;
     opacity: 0;
 
@@ -76,19 +73,6 @@ nav {
         //background: url("assets/stroke.svg") no-repeat center;
     }
 
-    // > a::after {
-    //     content: '';
-    //     display: block;
-    //     width: 0;
-    //     height: 10px;
-    //     background: url("assets/stroke.svg") no-repeat center;
-    //     transition: width .3s;
-    // }
-
-    // >a:hover::after {
-    //     width: 100%;
-    //     transition: width .3s;
-    // }
 }
 
 .entry_animation {

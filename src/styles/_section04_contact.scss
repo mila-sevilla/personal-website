@@ -1,11 +1,6 @@
 .contactContent {
-    display: flex;
-    justify-content: center;
-    flex-flow: row wrap;
-    flex-direction: column;
-    width: 100%;
+    @include flexCenter(column, wrap);
     height: 100%;
-    //height: 100vh;
     color: white;
 
 
@@ -36,9 +31,7 @@
     }
 
     .socialIcons {
-        display: flex;
-        justify-content: center;
-        width: 100%;
+        @include flexCenter(row, nowrap);
         text-align: center;
         height: 120px;
         margin: 10px 0 20px 0;
