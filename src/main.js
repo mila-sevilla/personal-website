@@ -4,14 +4,17 @@ import "./styles/main.scss";
 
 //For IE:
 //const slides = Array.prototype.slice.call(document.querySelectorAll('.slide'));
-const slides = document.querySelectorAll('.slide')
+//Or try arrayFrom and then build
+const slides = Array.from(document.querySelectorAll('.slide'))
 const prev = document.querySelector("[data-action='slideLeft']")
 const next = document.querySelector("[data-action='slideRight']")
+const dots = Array.from(document.querySelectorAll('.nav-dot'))
 
 let currentSlide = 0
 
-function nextSlide() {
+const nextSlide = () => {
     slides[currentSlide].classList.remove('current')
+    dots[currentSlide].classList.remove('currentDot')
 
     if (currentSlide === slides.length - 1) {
         currentSlide = 0
@@ -20,11 +23,12 @@ function nextSlide() {
     }
 
     slides[currentSlide].classList.add('current')
-
+    dots[currentSlide].classList.add('currentDot')
 }
 
 const prevSlide = () => {
     slides[currentSlide].classList.remove('current')
+    dots[currentSlide].classList.remove('currentDot')
 
     if (currentSlide === 0) {
         currentSlide = slides.length - 1
@@ -33,12 +37,42 @@ const prevSlide = () => {
     }
 
     slides[currentSlide].classList.add('current')
-
+    dots[currentSlide].classList.add('currentDot')
 }
 
 next.addEventListener('click', nextSlide)
-
 prev.addEventListener('click', prevSlide)
+
+
+dots.forEach(
+    (dot) => {
+        dot.addEventListener('click', function() {
+            slides[currentSlide].classList.remove('current')
+            dots[currentSlide].classList.remove('currentDot')
+
+            const index = dots.indexOf(this)
+            currentSlide = index
+
+            slides[currentSlide].classList.add('current')
+            dots[currentSlide].classList.add('currentDot')
+            }
+        )
+    }
+) 
+
+// dots[0,1,2]  slides[0,1,2]
+
+// const navDots = () => {
+//     slides[currentSlide].classList.remove('current')
+//     dots[currentSlide].classList.remove('currentDot')
+
+//     if (slides[currentSlide] !== currentSlide) 
+// }
+
+// dots[0].addEventListener("click", function(){  })
+// dots[1].addEventListener("click", function(){ currentSlide = 1 })
+
+
 
 // Full page scroll on desktop
 // const sections = document.querySelectorAll('section');
