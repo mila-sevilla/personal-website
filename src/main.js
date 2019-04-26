@@ -1,5 +1,3 @@
-import "./styles/main.scss";
-
 // Portfolio Carousel
 
 //For IE:

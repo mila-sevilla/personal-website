@@ -1,27 +1,31 @@
 @import "./mixins";
 
-header {
-    height: 50px;
-    width: 100%;
-    margin-top: 10px;
-    align-self: flex-start;
-}
-
 .content {
     height: 100%;
-}
-
-.logo {
-    background: url("../assets/logo.svg") center no-repeat;
-    background-size: 51px auto;
-    height: 50px;
-    width: 100px;
-    z-index: 99;
 }
 
 .introContent {
     @include flexCenter(row, wrap);
     height: 100%;
+
+    header {
+        margin: 10px 0 0 5px;
+        align-self: flex-start;
+        width: 100%;
+        height: 42px;
+
+        .section0Link {
+            display: inline-block;
+            height: 35px;
+            width: 65px;
+        }
+    }
+
+    .logo {
+        height: 35px;
+        z-index: 99;
+        padding: 5px;
+    }
 
     h1 {
         font-size: 105px;
@@ -31,14 +35,19 @@ header {
         opacity: 0;
     }
 
+    &_wrapper {
+        @include flexCenter(column, wrap);
+    }
+
     &_portrait {
-        display: inline-block;
-        background: url("../assets/portfolio_pic_medium.webp") top no-repeat;
-        background-size: 160px;
-        width: 100%;
-        height: 170px;
-        margin: 20px 0px;
+        // background-size: 160px;
+        height: 160px;
+        margin: 20px auto;
         opacity: 0;
+    }
+
+    &_portrait_large {
+        display: none;
     }
 
     &_text {
@@ -103,12 +112,6 @@ nav {
 
 @media (min-width: $break-tablet) {
 
-    .logo {  
-        background-size: 61px auto;
-        height: 50px;
-        width: 100px;
-    }
-
     h2 {
         font-size: 100px;
         background-size: 122px;
@@ -137,13 +140,18 @@ nav {
         }
     
         &_portrait {
-            background-size: auto;
+            display: none;
+        }
+    
+        &_portrait_large {
+            display: block;
             height: 400px;
-            width: 295px;
             margin: 0;
             grid-column: 1;
             grid-row: 1 / span 2;
             align-self: end;
+            justify-self: center;
+
         }
     
         &_text {
