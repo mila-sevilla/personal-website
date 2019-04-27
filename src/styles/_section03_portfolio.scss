@@ -18,7 +18,8 @@
 
     .slide {
         visibility: hidden;
-        transition: opacity 0.4s ease-in-out;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
         min-width: 100%;
         position: absolute;
         left: 0;
@@ -26,6 +27,7 @@
 
     .slide.current {
         visibility: visible;
+        opacity: 1;
     }
 
     .button-wrapper {
@@ -130,6 +132,11 @@
     padding: 0;
     width: 80%;
     margin: auto;
+
+    a {
+        color: $color-primary;
+        text-decoration: none;
+    }
     
     &_date {
         color: #9297A0;

@@ -47,7 +47,6 @@
     text-align: center;
     padding: 75px 0 20px 0;
     margin: 0px 30px;
-    background-position: center top;
     transition: $hover-transition;
 }
 
@@ -57,13 +56,40 @@
     transform: scale(1.1);
 }
 
-
 .linkedin {
     background: url("../assets/linkedin.svg") center top no-repeat;
 }
 
 .github {
     background: url("../assets/github_nofill.svg") center top no-repeat;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0 20px 20px 20px;
+    
+    > p {
+        margin: 0;
+        opacity: 0.7;
+        font-size: 13px;
+    } 
+
+    > a {
+        background: url("../assets/arrow_up.svg") center top no-repeat;
+        text-decoration: none;
+        color: $color-text-light;
+        font-size: 13px;
+        padding: 30px 0 0 0;
+        transition: $hover-transition;
+        opacity: 0.7;
+
+    }
+
+    > a:hover {
+        opacity: 1;
+    }
 }
 
 /* //////////////////////////////// Media Queries /////////////////////////////////////////// */
