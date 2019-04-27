@@ -134,8 +134,8 @@
     margin: auto;
 
     a {
-        color: $color-primary;
-        text-decoration: none;
+        color: $color-text-light;
+        text-decoration-color: $color-text-light;
     }
     
     &_date {
