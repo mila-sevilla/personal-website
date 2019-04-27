@@ -39,24 +39,21 @@
         z-index: 3;
     }
 
-    .leftButton{
+    button {
         border: none;
-        background: url("../assets/arrow_left.svg") transparent no-repeat;
+        border-radius: 50%;
         background-size: 40px;
         height: 44px;
         width: 44px;
         margin-left: 2em;
-        transition: $hover-transition;
+    }
+
+    .leftButton{
+        background: url("../assets/arrow_left.svg") transparent no-repeat;
     }
 
     .rightButton {
-        border: none;
         background: url("../assets/arrow_right.svg") transparent no-repeat;
-        background-size: 40px;
-        height: 44px;
-        width: 44px;
-        margin-right: 2em;
-        transition: $hover-transition;
     }
 
     .nav-dots {

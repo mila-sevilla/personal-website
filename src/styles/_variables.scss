@@ -59,10 +59,17 @@ p {
 
 button, 
 a {
+    transition: $hover-transition;
+
     &:hover {
-    cursor: pointer;
+        cursor: pointer;
+        transform: scale(1.1);
     }
 
+    &:focus {
+        outline: none;
+        box-shadow: 0 0 3pt 2pt #DBA37A;
+    }
 }
 
 section {

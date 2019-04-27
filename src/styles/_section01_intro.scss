@@ -78,15 +78,9 @@ nav {
         text-align: center;
         margin: 20px 1.5em 0px 1.5em;
         display: inline-block;
-        transition: $hover-transition;
         background: url("../assets/stroke.svg") no-repeat center;
         background-position-y: 26px;
     }
-
-    > a:hover {
-        transform: scale(1.1);
-    }
-
 }
 
 .entry_animation {
