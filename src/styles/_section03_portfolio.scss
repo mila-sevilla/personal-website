@@ -1,28 +1,26 @@
 .portfolioContent {
     @include flexCenter(column, nowrap);
     max-width: 880px;
-    position: relative;
     margin: 0 auto;
-    height: 100%;
-    min-height: 700px;
 
     .slider {
         @include flexCenter(row, nowrap);
+        position: relative;
         margin: 0;
         padding: 0;
         list-style: none;
-        height: 100%;
         min-height: 600px;
-        transition: all 1s ease;
     }
 
     .slide {
         visibility: hidden;
         opacity: 0;
-        transition: opacity 0.5s ease-in-out;
+        transition: all 0.7s ease-in-out;
         min-width: 100%;
         position: absolute;
         left: 0;
+        min-height: 600px;
+        margin-top: 30px;
     }
 
     .slide.current {
@@ -31,11 +29,10 @@
     }
 
     .button-wrapper {
-        width: 100%;
-        display: flex;
+        @include flexCenter(row, nowrap);
+        height: 100%;
         justify-content: space-between;
         position: absolute;
-        top: 22%;
         z-index: 3;
     }
 
@@ -45,15 +42,16 @@
         background-size: 40px;
         height: 44px;
         width: 44px;
-        margin-left: 2em;
     }
 
     .leftButton{
         background: url("../assets/arrow_left.svg") transparent no-repeat;
+        margin-left: -2em;
     }
 
     .rightButton {
         background: url("../assets/arrow_right.svg") transparent no-repeat;
+        margin-right: -2em;
     }
 
     .nav-dots {
@@ -82,6 +80,7 @@
         background-color: white;
         border-radius: 50%;
         opacity: 0.2;
+        z-index: 3;
     }
 
     .nav-dot.currentDot > span  {
@@ -257,15 +256,8 @@
         }
 
         .button-wrapper {
-            top: 45%;
-        }
-
-        .leftButton{
-            margin-left: -2em;
-        }
-
-        .rightButton{
-            margin-right: -2em;
+            width: 880px;
+            left: -40px;
         }
 
        .nav-dots {

@@ -1,11 +1,10 @@
 // Portfolio Carousel
 
-//For IE:
+//Test if necessary for IE:
 //const slides = Array.prototype.slice.call(document.querySelectorAll('.slide'));
-//Or try arrayFrom and then build
 const slides = Array.from(document.querySelectorAll('.slide'))
-const prev = document.querySelector("[data-action='slideLeft']")
-const next = document.querySelector("[data-action='slideRight']")
+const prev_buttons = Array.from(document.querySelectorAll("[data-action='slideLeft']"))
+const next_buttons = Array.from(document.querySelectorAll("[data-action='slideRight']"))
 const dots = Array.from(document.querySelectorAll('.nav-dot'))
 
 let currentSlide = 0
@@ -38,9 +37,15 @@ const prevSlide = () => {
     dots[currentSlide].classList.add('currentDot')
 }
 
-next.addEventListener('click', nextSlide)
-prev.addEventListener('click', prevSlide)
+prev_buttons.forEach((prev_button) => {
+    prev_button.addEventListener('click', prevSlide)
+})
 
+next_buttons.forEach((next_button) => {
+    next_button.addEventListener('click', nextSlide)
+})
+
+//Navigation with the dots
 
 dots.forEach(
     (dot) => {
@@ -58,19 +63,6 @@ dots.forEach(
     }
 ) 
 
-// dots[0,1,2]  slides[0,1,2]
-
-// const navDots = () => {
-//     slides[currentSlide].classList.remove('current')
-//     dots[currentSlide].classList.remove('currentDot')
-
-//     if (slides[currentSlide] !== currentSlide) 
-// }
-
-// dots[0].addEventListener("click", function(){  })
-// dots[1].addEventListener("click", function(){ currentSlide = 1 })
-
-
 
 // Full page scroll on desktop
 // const sections = document.querySelectorAll('section');
@@ -82,10 +74,6 @@ dots.forEach(
 // const animationDuration = 1000;
 // let lastAnimation = 0;
 // let index = 0;
-
-
-
-// //Full page scroll on desktop with mouse wheel
 
 // document.addEventListener('wheel', event => {
 //     var delta = event.wheelDelta;
@@ -118,39 +106,3 @@ dots.forEach(
 //     }  
 //     lastAnimation = timeNow;
 // })
-
-// Portfolio Carousel
-
-
-
-// Navigational Progress Dots
-
-// const updateDot = () => {
-//   if()
-// }
-
-// _updateCurrentSlideDot : function () {
-//   // update dots
-//   var dots = this.obj.querySelectorAll(".carousel-dot");
-//   for(var i = 0; i < dots.length; i++){
-//     if(i == this.slide_index){
-//       dots[this.slide_index].className += " active";
-//     } else {
-//       dots[i].className = dots[i].className.replace(/(^| )active/,"");
-//     }
-//   }
-
-// },
-
-// index = 0;
-
-// nav_dots.forEach() {
-//   if(slides.classList.contains('current')) {
-//     nav_dots.classList.add('active')
-//   } else {
-//     nav_dots.classList.remove('active')
-//   }
-
-// }
-
-
