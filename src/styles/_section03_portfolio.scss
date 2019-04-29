@@ -30,7 +30,6 @@
 
     .button-wrapper {
         @include flexCenter(row, nowrap);
-        height: 100%;
         justify-content: space-between;
         position: absolute;
         z-index: 3;
@@ -202,6 +201,41 @@
     }
 }
 
+.tooltip {
+    position: relative;
+  }
+  .tooltip:after {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: 127%;
+    right: 0;
+    background: $color-text-light;
+    padding: 5px 15px;
+    color: black;
+    border-radius : 5px;
+    white-space: nowrap;
+    opacity: 0;
+    transition : all 0.2s ease;
+    font-size: 12px;
+  }
+
+  .tooltip:before {
+    content: "";
+    position: absolute;
+    top: 94%;
+    left: 50%;
+    margin-left: -7px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent $color-text-light transparent;
+    transition : all 0.2s ease;
+    opacity: 0;
+  }
+
+  .tooltip:hover:after, .tooltip:hover:before {
+    opacity: 1;
+  }
+
 /* //////////////////////////////// Media Queries /////////////////////////////////////////// */
 
 @media (min-width: $break-desktop) {
@@ -212,7 +246,6 @@
     
     .portfolioContent {
         width: 900px;
-        height: 500px;
 
         &Image {
             height: 450px;
@@ -244,8 +277,7 @@
             background: $color-secondary-light;
             box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.12), 0px 0px 2px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.25);
             border-radius: 3px;
-            height: 100%;
-            max-height: 500px;
+            min-height: 500px;
             justify-content: space-around;
         }
 
