@@ -1,7 +1,5 @@
-const path = require('path')
 const fs = require('fs')
 
-// const outDir = bundler.options.outDir;
 const whiteList = [
   '.eslintrc.json',
   '.git',
@@ -25,12 +23,10 @@ try {
         return
       }
 
-      console.log(file)
-      // const filePath = `${outDir}/${file}`;
       fs.unlinkSync(`./${file}`)
     })
   }
 }
 catch (err) {
-  console.log(err)
+//   console.log(err)
 }

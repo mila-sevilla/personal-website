@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "parcel src/index.html",
-    "build": "parcel build -d ./ --public-url ./ src/index.html",
-    "publish": "parcel build -d ./ --public-url ./ src/index.html && git add . && git commit -m \"deploy\" && git push origin",
+    "build": "node src/clean.js && parcel build -d ./ --public-url ./ src/index.html",
+    "publish": "node src/clean.js && parcel build -d ./ --public-url ./ src/index.html && git add . && git commit -m \"deploy\" && git push origin",
     "eslint": "eslint src/**/*.js"
   },
   "repository": {
@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/mila-sevilla/Personal-Website#readme",
   "devDependencies": {
+    "cssnano": "^4.1.10",
     "eslint": "^5.16.0",
     "sass": "^1.19.0"
   },
