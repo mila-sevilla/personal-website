@@ -1,66 +1,67 @@
+import './styles/main.scss'
 // Portfolio Carousel
 
 //Test if necessary for IE:
 //const slides = Array.prototype.slice.call(document.querySelectorAll('.slide'));
 const slides = Array.from(document.querySelectorAll('.slide'))
-const prev_buttons = Array.from(document.querySelectorAll("[data-action='slideLeft']"))
-const next_buttons = Array.from(document.querySelectorAll("[data-action='slideRight']"))
+const prev_buttons = Array.from(document.querySelectorAll('[data-action=\'slideLeft\']'))
+const next_buttons = Array.from(document.querySelectorAll('[data-action=\'slideRight\']'))
 const dots = Array.from(document.querySelectorAll('.nav-dot'))
 
 let currentSlide = 0
 
 const nextSlide = () => {
-    slides[currentSlide].classList.remove('current')
-    dots[currentSlide].classList.remove('currentDot')
+  slides[currentSlide].classList.remove('current')
+  dots[currentSlide].classList.remove('currentDot')
 
-    if (currentSlide === slides.length - 1) {
-        currentSlide = 0
-    } else {
-        currentSlide++
-    }
+  if (currentSlide === slides.length - 1) {
+    currentSlide = 0
+  } else {
+    currentSlide++
+  }
 
-    slides[currentSlide].classList.add('current')
-    dots[currentSlide].classList.add('currentDot')
+  slides[currentSlide].classList.add('current')
+  dots[currentSlide].classList.add('currentDot')
 }
 
 const prevSlide = () => {
-    slides[currentSlide].classList.remove('current')
-    dots[currentSlide].classList.remove('currentDot')
+  slides[currentSlide].classList.remove('current')
+  dots[currentSlide].classList.remove('currentDot')
 
-    if (currentSlide === 0) {
-        currentSlide = slides.length - 1
-    } else {
-        currentSlide--
-    }
+  if (currentSlide === 0) {
+    currentSlide = slides.length - 1
+  } else {
+    currentSlide--
+  }
 
-    slides[currentSlide].classList.add('current')
-    dots[currentSlide].classList.add('currentDot')
+  slides[currentSlide].classList.add('current')
+  dots[currentSlide].classList.add('currentDot')
 }
 
-prev_buttons.forEach((prev_button) => {
-    prev_button.addEventListener('click', prevSlide)
+prev_buttons.forEach(prev_button => {
+  prev_button.addEventListener('click', prevSlide)
 })
 
-next_buttons.forEach((next_button) => {
-    next_button.addEventListener('click', nextSlide)
+next_buttons.forEach(next_button => {
+  next_button.addEventListener('click', nextSlide)
 })
 
 //Navigation with the dots
 
 dots.forEach(
-    (dot) => {
-        dot.addEventListener('click', function() {
-            slides[currentSlide].classList.remove('current')
-            dots[currentSlide].classList.remove('currentDot')
+  dot => {
+    dot.addEventListener('click', function() {
+      slides[currentSlide].classList.remove('current')
+      dots[currentSlide].classList.remove('currentDot')
 
-            const index = dots.indexOf(this)
-            currentSlide = index
+      const index = dots.indexOf(this)
+      currentSlide = index
 
-            slides[currentSlide].classList.add('current')
-            dots[currentSlide].classList.add('currentDot')
-            }
-        )
+      slides[currentSlide].classList.add('current')
+      dots[currentSlide].classList.add('currentDot')
     }
+    )
+  }
 ) 
 
 
