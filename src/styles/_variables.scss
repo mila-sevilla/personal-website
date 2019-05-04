@@ -11,11 +11,10 @@ $font-weight-regular: 300;
 $font-weight-bold: 700;
 
 // BREAKPOINTS 
-$break-phablet: 480px;
 $break-tablet: 700px;
+$break-tablet-height: 700px;
 $break-desktop: 1000px;
 $break-wide: 1280px;
-$break-height: 700px;
 
 //ANIMATIONS
 $hover-transition: all .2s ease-in-out;
@@ -76,7 +75,7 @@ section {
     min-height: 700px;
 }
 
-@media (min-width: $break-tablet) and (min-height: $break-height) {
+@media (min-width: $break-tablet) and (min-height: $break-tablet-height) {
     section {
         height: 100vh;
     }

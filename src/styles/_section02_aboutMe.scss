@@ -1,5 +1,5 @@
 .aboutMeContent {
-    margin: 20px 20px 0 20px;
+    margin: 20px;
 
     &_heading {
         @include flexCenter(row, nowrap);
@@ -59,13 +59,14 @@
 @media (min-width: $break-tablet) {
 
     .aboutMeContent {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        @include flexCenter(column, wrap);
         height: 100%;
         margin: 0;
 
         h2 {
+            font-size: 100px;
+            background-size: 122px;
+            width: 380px;
             margin-bottom: 40px;
             margin: 50px 0;
         }
