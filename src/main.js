@@ -1,12 +1,16 @@
 import './styles/main.scss'
 // Portfolio Carousel
 
-//Test if necessary for IE:
-//const slides = Array.prototype.slice.call(document.querySelectorAll('.slide'));
-const slides = Array.from(document.querySelectorAll('.slide'))
-const prev_buttons = Array.from(document.querySelectorAll('[data-action=\'slideLeft\']'))
-const next_buttons = Array.from(document.querySelectorAll('[data-action=\'slideRight\']'))
-const dots = Array.from(document.querySelectorAll('.nav-dot'))
+//Necessary for IE, array.from not supported:
+const slides = Array.prototype.slice.call(document.querySelectorAll('.slide'))
+const prev_buttons = Array.prototype.slice.call(document.querySelectorAll('[data-action=\'slideLeft\']'))
+const next_buttons = Array.prototype.slice.call(document.querySelectorAll('[data-action=\'slideRight\']'))
+const dots = Array.prototype.slice.call(document.querySelectorAll('.nav-dot'))
+
+// const slides = Array.from(document.querySelectorAll('.slide'))
+// const prev_buttons = Array.from(document.querySelectorAll('[data-action=\'slideLeft\']'))
+// const next_buttons = Array.from(document.querySelectorAll('[data-action=\'slideRight\']'))
+// const dots = Array.from(document.querySelectorAll('.nav-dot'))
 
 let currentSlide = 0
 
