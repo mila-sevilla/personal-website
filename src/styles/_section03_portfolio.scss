@@ -211,7 +211,7 @@
     top: 127%;
     right: 0;
     background: $color-text-light;
-    padding: 5px 15px;
+    padding: 5px 8px;
     color: black;
     border-radius : 5px;
     white-space: nowrap;
@@ -295,5 +295,9 @@
        .nav-dots {
            margin: 0 0 20px 0;
        }
+    }
+
+    .tooltip:after {
+        padding: 5px 15px;
     }
 }
