@@ -47,8 +47,9 @@ header {
     }
 
     &_text {
-        margin: 10px 38px 20px 38px;
+        padding: 10px 38px 20px 38px;
         opacity: 0;
+        width: 100%;
     }
 }
 
@@ -64,7 +65,7 @@ nav {
     }
 
     > a {
-        width: 185px;
+        width: 195px;
         height: 47px;
         border: none;
         padding: 0px 40px 0px 40px;
@@ -139,7 +140,7 @@ nav {
     
         &_text {
             margin: 0;
-            padding-right: 15px;
+            padding: 0 15px 0 0;
             align-self: end;
             line-height: 190%;
             grid-column: 2;

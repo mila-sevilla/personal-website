@@ -242,7 +242,7 @@
 @media (min-width: $break-desktop) {
 
     .portfolio {
-        @include flexCenter(row, wrap);
+        @include flexCenter(column, wrap);
     }
     
     .portfolioContent {
