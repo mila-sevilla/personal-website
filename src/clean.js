@@ -7,6 +7,7 @@ const whiteList = [
   '.gitignore',
   '.vscode',
   '.postcssrc',
+  '.browserlistrc',
   'README.md',
   'src',
   'package.json',
