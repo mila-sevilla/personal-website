@@ -33,7 +33,7 @@ const nextSlide = () => {
 }
 
 
-const prevSlide = e => {
+const prevSlide = () => {
   slides[currentSlide].classList.remove('current')
   dots[currentSlide].classList.remove('currentDot')
 
