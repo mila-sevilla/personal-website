@@ -6,11 +6,12 @@ const whiteList = [
   '.cache',
   '.gitignore',
   '.vscode',
+  '.postcssrc',
   'README.md',
   'src',
   'package.json',
   'package-lock.json',
-  'node_modules',
+  'node_modules'
 ]
 
 try {
