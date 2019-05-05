@@ -12,7 +12,8 @@ const whiteList = [
   'src',
   'package.json',
   'package-lock.json',
-  'node_modules'
+  'node_modules',
+  'dist'
 ]
 
 try {
@@ -30,5 +31,6 @@ try {
   }
 }
 catch (err) {
-//   console.log(err)
+  // eslint-disable-next-line
+   console.log(err)
 }
