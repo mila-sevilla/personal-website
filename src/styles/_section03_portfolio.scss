@@ -54,9 +54,7 @@
     }
 
     .nav-dots {
-        @include flexCenter(row, nowrap);
-        align-self: center;
-        margin-bottom: 50px;
+        display: flex;
         list-style: none;
         padding: 0;
     }
