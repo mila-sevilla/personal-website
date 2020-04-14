@@ -1,10 +1,11 @@
 // COLORS
 $color-text-light: #EFE4E4;
+$color-text-dark: #23494F;
 $color-primary: #D27029;
 $color-primary-dark: #D26F28;
 $color-secondary-dark: #134047;
 $color-secondary-light: #134047;
-$color-background: #16223B;
+$color-background: #E7F6F8;
 
 // FONT SIZE & WEIGHT
 $font-size-regular: 16px;
@@ -38,7 +39,7 @@ body {
 
 h1, h2, h3 {
     font-family: 'Satisfy', 'Century Gothic', cursive;
-    color: $color-text-light;
+    color: $color-text-dark;
 }
 
 h2 {
@@ -52,7 +53,7 @@ h2 {
 }
 
 p {
-    color: $color-text-light;
+    color: $color-text-dark;
     font-size: $font-size-regular;
 }
 
@@ -78,9 +79,5 @@ section {
 @media (min-width: $break-tablet) and (min-height: $break-tablet-height) {
     section {
         height: 100vh;
-    }
-
-    body {
-        border: 15px solid white;
     }
 }

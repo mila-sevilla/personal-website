@@ -5,51 +5,41 @@
 }
 
 header {
-    margin: 10px 0 0 5px;
-    align-self: flex-start;
     width: 100%;
-
-    .section0Link {
-        display: inline-block;
-        height: 35px;
-        width: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    .github {
+        margin-right: 15px;
+        height: 34px;
+        img {
+            height: 100%;
+        }
     }
-}
-
-.logo {
-    height: 35px;
-    padding: 5px;
 }
 
 .introContent {
     @include flexCenter(row, wrap);
     height: 100%;
 
-    h1 {
-        font-size: 105px;
-        height: 140px;
-        margin: 0px 20px 0px 20px;
-        opacity: 0;
-    }
-
     &_wrapper {
         @include flexCenter(column, wrap);
     }
 
     &_portrait {
-        height: 175px;
+        max-width: 100%;
         margin: 20px auto;
         opacity: 0;
-    }
-
-    &_portrait_large {
-        display: none;
     }
 
     &_text {
         padding: 10px 38px 20px 38px;
         opacity: 0;
         width: 100%;
+        // margin-top: 30px;
+        line-height: 190%;
+        max-width: 600px;
+        text-align: center;
     }
 }
 
@@ -69,7 +59,7 @@ nav {
         height: 47px;
         border: none;
         font-size: 18px;
-        color: $color-text-light;
+        color: $color-text-dark;
         text-decoration: none;
         text-align: center;
         margin: 20px 1.5em 0px 1.5em;
@@ -104,49 +94,6 @@ nav {
 @media (min-width: $break-tablet) {
 
     .introContent {   
-        &_wrapper {
-            display: grid;
-            grid-template-columns: 50% 50%;
-            grid-template-rows: 50% 50%;
-            width: 630px;
-            height: 475px;
-        }
-
-        h1 {
-            font-size: 180px;
-            height: 211px;
-            grid-column: 1 / span 2;
-            grid-row: 1;
-            justify-self: end;
-            margin: 0 0 30px 0;
-            width: 70%;
-            text-align: center;
-        }
-    
-        &_portrait {
-            display: none;
-        }
-    
-        &_portrait_large {
-            display: block;
-            height: 400px;
-            grid-column: 1;
-            grid-row: 1 / span 2;
-            align-self: end;
-            justify-self: center;
-            opacity: 0;
-
-        }
-    
-        &_text {
-            margin: 0;
-            padding: 0 15px 0 0;
-            align-self: end;
-            line-height: 190%;
-            grid-column: 2;
-            grid-row: 2;
-            height: 232px;
-        }
     
         nav {
             flex-wrap: nowrap;
