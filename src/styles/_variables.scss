@@ -1,11 +1,13 @@
 // COLORS
-$color-text-light: #EFE4E4;
-$color-text-dark: #23494F;
-$color-primary: #D27029;
+$color-text-light: #e3e6e6;
+$color-text-main: #23494F;
+$color-text-title: #397F88;
+$color-primary: #F9C784;
 $color-primary-dark: #D26F28;
 $color-secondary-dark: #134047;
 $color-secondary-light: #134047;
 $color-background: #E7F6F8;
+$color-background-darker: #D9EEF1;
 
 // FONT SIZE & WEIGHT
 $font-size-regular: 16px;
@@ -39,7 +41,7 @@ body {
 
 h1, h2, h3 {
     font-family: 'Satisfy', 'Century Gothic', cursive;
-    color: $color-text-dark;
+    color: $color-text-title;
 }
 
 h2 {
@@ -53,7 +55,7 @@ h2 {
 }
 
 p {
-    color: $color-text-dark;
+    color: $color-text-main;
     font-size: $font-size-regular;
 }
 
