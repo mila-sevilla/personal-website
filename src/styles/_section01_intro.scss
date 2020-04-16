@@ -4,12 +4,11 @@
     height: 100%;
 }
 
-header {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    .github {
+.introContent {
+    @include flexCenter(row, wrap);
+    height: 100%;
+
+    &_githubLink {
         position: absolute;
         top: 15px;
         right: 15px;
@@ -18,19 +17,17 @@ header {
             height: 100%;
         }
     }
-}
-
-.introContent {
-    @include flexCenter(row, wrap);
-    height: 100%;
 
     &_wrapper {
-        @include flexCenter(column, no-wrap);
+        @include flexCenter(column, nowrap);
     }
 
     &_greeting {
         background-color: #d9eef1;
         height: 380px;
+        display: flex;
+        width: 100%;
+        justify-content: center;
         &-title {
             font-size: 110px;
             margin-top: 50px;
@@ -38,6 +35,10 @@ header {
             position: absolute;
             width: 100%;
             z-index: 1;
+        }
+        &-img {
+            object-fit: cover;
+            max-width: 100%;
         }
     }
 
@@ -115,7 +116,7 @@ nav {
 
 @media (max-width: $break-tablet) {
 
-    header .github {
+    .introContent_githubLink  {
         display: none;
     }
 }
