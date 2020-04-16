@@ -1,6 +1,7 @@
 .portfolioContent {
     @include flexCenter(column, nowrap);
     max-width: 880px;
+    height: 100%;
 
     .slider {
         display: flex;
