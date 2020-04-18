@@ -1,0 +1,22 @@
+<svg width="318" height="318" xmlns="http://www.w3.org/2000/svg">
+  <g fill="none" fill-rule="evenodd">
+    <path stroke="#4A4A4A" stroke-width="4" d="M2 2h314v314H2z"/>
+    <text font-family="Helvetica" font-size="36" fill="#4A4A4A">
+      <tspan x="35.5" y="241">styled</tspan>
+    </text>
+    <text font-family="Helvetica" font-size="36" fill="#4A4A4A">
+      <tspan x="34" y="277">components</tspan>
+    </text>
+    <g font-size="100" letter-spacing=".5">
+      <text font-family="Helvetica" fill="#4A4A4A" transform="translate(29 44)">
+        <tspan x="0" y="101">&lt;</tspan>
+      </text>
+      <text font-family="Helvetica" fill="#4A4A4A" transform="translate(29 44)">
+        <tspan x="186" y="100">&gt;</tspan>
+      </text>
+      <text font-family="AppleColorEmoji, Apple Color Emoji" fill="#000" transform="translate(29 44)">
+        <tspan x="79" y="100">💅</tspan>
+      </text>
+    </g>
+  </g>
+</svg>

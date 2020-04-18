@@ -46,14 +46,14 @@
         background: url("../assets/arrow_left.svg") transparent center left no-repeat;
         margin-left: -2em;
         background-color: $color-text-title;
-        background-size: 42px;
+        background-size: 41px;
     }
 
     .rightButton {
-        background: url("../assets/arrow_right.svg") transparent center right no-repeat;
+        background: url("../assets/arrow_right.svg") transparent top right no-repeat;
         margin-right: -2em;
         background-color: $color-text-title;
-        background-size: 42px;
+        background-size: 41px;
     }
 
     .nav-dots {
@@ -115,7 +115,7 @@
     }
 
     a {
-        background: url("../assets/github.svg") center no-repeat;
+        background: url("../assets/github_nofill.svg") center no-repeat;
         background-size: 80%;
         position: absolute;
         bottom: -12px;
@@ -171,6 +171,16 @@
 
         .figma {
             background: url("../assets/figma.png") center no-repeat;
+            background-size: 100%;
+        }
+
+        .styledComp {
+            background: url("../assets/styledComponents.svg") center no-repeat;
+            background-size: 100%;
+        }
+
+        .typescript {
+            background: url("../assets/typescript.svg") center no-repeat;
             background-size: 100%;
         }
 
