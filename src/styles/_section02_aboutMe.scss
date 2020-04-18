@@ -36,7 +36,7 @@
         content: '';
         position: absolute;
         width: 2px; 
-        background-color: #E1AA7D;
+        background-color: $color-primary-dark;
         left: -19px;
         top: 8px;
         bottom: 6px;
@@ -50,7 +50,7 @@
     .date::after {
         content: '';
         position: absolute;
-        border: 5px solid #E1AA7D; 
+        border: 5px solid $color-primary-dark; 
         border-radius: 50%;
         left: -23px;
         margin-top: 7px;

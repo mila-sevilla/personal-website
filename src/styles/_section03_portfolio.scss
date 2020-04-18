@@ -43,14 +43,16 @@
     }
 
     .leftButton{
-        background: url("../assets/arrow_left.svg") transparent center no-repeat;
+        background: url("../assets/arrow_left.svg") transparent center left no-repeat;
         margin-left: -2em;
+        background-color: $color-text-title;
         background-size: 42px;
     }
 
     .rightButton {
-        background: url("../assets/arrow_right.svg") transparent center no-repeat;
+        background: url("../assets/arrow_right.svg") transparent center right no-repeat;
         margin-right: -2em;
+        background-color: $color-text-title;
         background-size: 42px;
     }
 
@@ -75,7 +77,7 @@
         display: inline-block;
         width: 10px;
         height: 10px;
-        background-color: white;
+        background-color: $color-primary-dark;
         border-radius: 50%;
         opacity: 0.2;
     }
@@ -130,8 +132,9 @@
     margin: auto;
 
     a {
-        color: $color-text-light;
-        text-decoration-color: $color-text-light;
+        color: $color-primary-dark;
+        text-decoration-color: $color-primary-dark;
+        text-underline-position: under;
     }
     
     &_date {
@@ -258,6 +261,7 @@
 
             &_img {
                 max-width: 500px;
+                max-height: 340px;
                 margin: 0;
             }
 
