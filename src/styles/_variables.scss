@@ -10,9 +10,11 @@ $color-background: #E7F6F8;
 $color-background-darker: #D9EEF1;
 
 // FONT SIZE & WEIGHT
-$font-size-regular: 16px;
+$font-size-regular: 1rem;
 $font-weight-regular: 300;
 $font-weight-bold: 700;
+$font-size-sectionTitle-large: 6.25rem;
+$font-size-sectionTitle-sm: 5rem;
 
 // BREAKPOINTS 
 $break-tablet: 700px;
@@ -45,7 +47,7 @@ h1, h2, h3 {
 }
 
 h2 {
-    font-size: 80px;
+    font-size: $font-size-sectionTitle-sm;
     padding: 0;
     text-align: center;
     margin-bottom: 20px;
