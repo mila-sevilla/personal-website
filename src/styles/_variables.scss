@@ -1,5 +1,5 @@
 // COLORS
-$color-text-light: #e3e6e6;
+$color-text-light: #f9f9f9;
 $color-text-main: #23494F;
 $color-text-title: #397F88;
 $color-primary: #F9C784;
@@ -62,9 +62,9 @@ p {
 button, 
 a {
     transition: $hover-transition;
+    cursor: pointer;
 
     &:hover {
-        cursor: pointer;
         transform: scale(1.1);
     }
 
