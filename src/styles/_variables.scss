@@ -1,15 +1,20 @@
 // COLORS
-$color-text-light: #EFE4E4;
-$color-primary: #D27029;
-$color-primary-dark: #D26F28;
+$color-text-light: #f9f9f9;
+$color-text-main: #23494F;
+$color-text-title: #397F88;
+$color-primary: #F9C784;
+$color-primary-dark: #E1AA7D;
 $color-secondary-dark: #134047;
 $color-secondary-light: #134047;
-$color-background: #16223B;
+$color-background: #E7F6F8;
+$color-background-darker: #D9EEF1;
 
 // FONT SIZE & WEIGHT
-$font-size-regular: 16px;
+$font-size-regular: 1rem;
 $font-weight-regular: 300;
 $font-weight-bold: 700;
+$font-size-sectionTitle-large: 6.25rem;
+$font-size-sectionTitle-sm: 5rem;
 
 // BREAKPOINTS 
 $break-tablet: 700px;
@@ -38,11 +43,11 @@ body {
 
 h1, h2, h3 {
     font-family: 'Satisfy', 'Century Gothic', cursive;
-    color: $color-text-light;
+    color: $color-text-title;
 }
 
 h2 {
-    font-size: 80px;
+    font-size: $font-size-sectionTitle-sm;
     padding: 0;
     text-align: center;
     margin-bottom: 20px;
@@ -52,16 +57,16 @@ h2 {
 }
 
 p {
-    color: $color-text-light;
+    color: $color-text-main;
     font-size: $font-size-regular;
 }
 
 button, 
 a {
     transition: $hover-transition;
+    cursor: pointer;
 
     &:hover {
-        cursor: pointer;
         transform: scale(1.1);
     }
 
@@ -78,9 +83,5 @@ section {
 @media (min-width: $break-tablet) and (min-height: $break-tablet-height) {
     section {
         height: 100vh;
-    }
-
-    body {
-        border: 15px solid white;
     }
 }

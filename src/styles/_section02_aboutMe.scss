@@ -36,7 +36,7 @@
         content: '';
         position: absolute;
         width: 2px; 
-        background-color: #C4C4C4;
+        background-color: $color-primary-dark;
         left: -19px;
         top: 8px;
         bottom: 6px;
@@ -50,7 +50,7 @@
     .date::after {
         content: '';
         position: absolute;
-        border: 5px solid #C4C4C4; 
+        border: 5px solid $color-primary-dark; 
         border-radius: 50%;
         left: -23px;
         margin-top: 7px;
@@ -68,7 +68,7 @@
         margin: 0;
 
         h2 {
-            font-size: 100px;
+            font-size: $font-size-sectionTitle-large;
             background-size: 122px;
             width: 380px;
             margin-top: 0;
