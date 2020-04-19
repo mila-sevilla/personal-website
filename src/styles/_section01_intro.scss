@@ -24,7 +24,7 @@
 
     &_greeting {
         background-color: #d9eef1;
-        height: 380px;
+        height: 398px;
         display: flex;
         width: 100%;
         justify-content: center;
@@ -40,6 +40,7 @@
         &-img {
             object-fit: cover;
             max-width: 100%;
+            padding-top: 30px;
         }
     }
 
@@ -106,6 +107,9 @@ nav {
     .introContent {   
         &_greeting {
             background-color: transparent;
+            &-title {
+                margin-top: 76px;
+            }
         }
         nav {
             flex-wrap: nowrap;
@@ -116,8 +120,9 @@ nav {
 }
 
 @media (max-width: $break-tablet) {
-
-    .introContent_githubLink  {
-        display: none;
+    .introContent {
+        &_githubLink  {
+            display: none;
+        }
     }
 }
